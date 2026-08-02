@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "shiproom-kit",
+  "description": "Installer for the free Shiproom Kit: run your Claude Code project like a team. Type /shiproom-kit:setup to install 12 agents, 6 commands, 10 rules, 4 skills, and the project scaffold, then get a guided setup interview.",
+  "author": { "name": "Charles Ashe", "url": "https://charlesashe.ai" },
+  "homepage": "https://shiproom.ai",
+  "repository": "https://github.com/charlesashe/shiproom-kit",
+  "keywords": ["agents", "orchestrator", "verification", "project-memory", "shiproom"]
+}

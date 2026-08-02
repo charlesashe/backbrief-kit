@@ -1,0 +1,15 @@
+---
+description: Install the Shiproom Kit into this project (or globally), then run the guided setup interview. The one command a new user needs.
+---
+
+You are installing the Shiproom Kit from this plugin's bundled payload into the user's environment, then configuring it. Plain language throughout; the user may be non-technical.
+
+1. **Locate the payload.** This command ships inside the shiproom-kit plugin. Find the plugin's install directory: search `~/.claude/plugins/` for a directory that contains `kit-payload/team/agents/orchestrator.md` (glob for that path). Call it PLUGIN_ROOT. If you cannot find it, say so and stop — do not improvise a download.
+2. **Ask one question:** "Install the team globally (available in every project on this machine) or just in this project? Most people choose globally." Default to globally if the user is unsure.
+3. **Install the team.** Copy the CONTENTS of `PLUGIN_ROOT/kit-payload/team/` into `~/.claude/` (global) or `<project>/.claude/` (per-project). Create the target if needed. Never overwrite a file that already exists — skip it and note it. Guard against nesting mistakes: the result must be `.claude/agents/...`, not `.claude/team/...` or `.claude/.claude/...`.
+4. **Install the scaffold.** Copy the CONTENTS of `PLUGIN_ROOT/kit-payload/scaffold/` into the current project root, again never overwriting existing files. This adds `context/`, `inputs/`, `outputs/`, `workflows/`, a project `CLAUDE.md` template, and `.claude/memory/decisions.md`.
+5. **Verify.** Check and report a one-line pass/fail each: 12 agent files; commands including critique, council, handoff, resume, setup, verify-install; 10 rules; 4 skills with SKILL.md each; scaffold folders present; no nested `.claude/.claude/`. If anything failed, fix it (with the user's yes) before continuing.
+6. **Interview.** Ask, one at a time: what the project is (a sentence or two); what they want done in the next few weeks; any personal "never without asking" rules beyond the standard stops; anything already decided. Write the answers into `context/strategy/current-state.md`, `context/strategy/current-priorities.md`, and (for prior decisions) `.claude/memory/decisions.md`, in the user's own words. Read the two strategy files back in under 100 words and correct anything they flag.
+7. **Close with exactly:** "Setup is done. State a goal in plain words and the team will plan it, build it, and verify it. Useful commands: /critique to stress-test an idea, /council for a five-advisor debate, /handoff to end a session, /resume to start the next one. To update the kit later: /plugin update, then run this setup again — it only adds what's new and never touches your files."
+
+Notes: after step 3 the kit's own commands (unprefixed /critique, /setup, /verify-install, etc.) are installed at the user level or project level — tell the user to use those, not the /shiproom-kit: prefixed ones, from now on. If a file skip happened because the user already had a same-named file, list the skips and point to INTEGRATION guidance in the kit README rather than resolving silently.
