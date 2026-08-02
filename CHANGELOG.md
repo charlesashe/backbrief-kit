@@ -13,5 +13,5 @@
 ## 1.0.0 (2026-07-14)
 - Launch: 12 agents, 4 commands, 9 rules, project scaffold, /handoff + /resume project memory.
 
-## Updating an existing install
-Unzip the new download, open Claude Code in the unzipped folder, and paste: "Update my Shiproom Kit from this folder: compare kit/.claude/ against my installed copy, show me what changed, and apply the update without touching my context/, outputs/, or memory files."
+## Updating an existing install (plugin route)
+Run `/plugin update`, then `/shiproom-kit:setup` again — setup only adds what's new and never touches your context/, outputs/, or memory files. (Zip installs update differently; see the README inside the zip download.)
