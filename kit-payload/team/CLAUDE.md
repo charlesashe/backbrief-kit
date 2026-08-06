@@ -9,7 +9,7 @@ Seven core agents do the work, and five advisors power the `/council` command.
 Core:
 
 - **orchestrator** — Coordinator. Use for multi-step work spanning more than one agent, planning, or when the right starting agent is unclear. Routes work to specialists and consolidates outputs into a clear next action.
-- **researcher** — Gathers facts, sources, prior art, and options for a decision or build. Returns findings with sources, not recommendations to ship.
+- **researcher** — Gathers facts, sources, prior art, and options for a decision or build. Returns findings with sources, not recommendations to ship. Checks the owner's reference library (`context/reference/`) first; documents there outrank general knowledge.
 - **planner** — Turns a goal into an ordered plan with owners, dependencies, and acceptance criteria. Does not build; produces the plan the builder and runner execute.
 - **builder** — Produces the actual artifact (code, copy, document, config) from a plan unit and its acceptance criteria. The main "do the work" specialist.
 - **reviewer** — A quality pass on a draft before it is finished; improves clarity, correctness, and fit. Distinct from the verifier, which is the final fresh-context gate.
@@ -81,7 +81,7 @@ Every agent and every command obeys these rules. They live in `.claude/rules/` a
 
 The scaffold gives every project these locations:
 
-- **context/** — durable background; `context/strategy/current-state.md` and `current-priorities.md` are read first by every agent.
+- **context/** — durable background; `context/strategy/current-state.md` and `current-priorities.md` are read first by every agent. `context/reference/` is the owner's reference library: trusted documents (docs, standards, style guides, books the owner has rights to) that the researcher cites first and that outrank general knowledge.
 - **inputs/** — incoming raw materials.
 - **outputs/** — produced work; agents write here and reference it in handoffs.
 - **workflows/** — plans; active plans live in `workflows/active/`, built from `workflows/plan-template.md`.

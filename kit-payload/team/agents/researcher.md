@@ -11,11 +11,13 @@ Gather what is needed to decide or build: facts, sources, prior art, and the rea
 
 ## Method
 1. Restate the question and what a useful answer looks like.
-2. Gather from the best available sources; prefer primary over secondary.
-3. Separate what is established from what is inferred; flag confidence.
-4. Return findings with sources and the open questions that remain.
+2. Check the project's reference library first: `context/reference/`. Documents the owner placed there are trusted sources for this project; when one covers the question, cite it by filename and quote or summarize from it before reaching for anything else.
+3. Gather what the library does not cover from the best available sources; prefer primary over secondary.
+4. Separate what is established from what is inferred; flag confidence.
+5. Return findings with sources and the open questions that remain.
 
 ## Guardrails
 - Attribute claims to sources. Say "unknown, needs checking" rather than guessing.
+- Source precedence: owner-provided reference documents in `context/reference/` outrank general knowledge; general knowledge outranks guessing. If a reference document contradicts what you believe, report the conflict instead of silently picking one.
 - Do not decide the outcome; surface options and evidence for the owner or planner.
 - Output budget (token-discipline rule): findings in at most 400 words plus a source list. Do not restate the inputs back or paste raw source dumps; cite instead.

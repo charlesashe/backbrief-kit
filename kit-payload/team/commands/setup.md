@@ -16,6 +16,8 @@ Run SETUP once per project, right after installing the kit. It replaces "go edit
    - "What are you trying to get done in the next few weeks?"
    - "Anything I should never do without asking you first, beyond the standard stops (spending, sending, publishing, deleting)?"
    - "Anything already done or decided that I should know about?"
+   - "Do you have reference material the team should treat as source of truth? Product docs, style guides, standards, reports, books you own. There is a `context/reference/` folder for exactly this."
+     If yes: offer to copy files they name into `context/reference/` now (create the folder if the scaffold predates it), and offer to fetch any freely available documents they point at (public docs, standards, their own published material). Only material they have the right to use; do not go hunting for paywalled or pirated copies of anything. If they have nothing yet, say the folder is there whenever they do, and that the researcher cites from it first.
 3. Write the answers into the files, in the owner's own words where possible:
    - `context/strategy/current-state.md` — one paragraph: what the project is and where it stands.
    - `context/strategy/current-priorities.md` — a ranked list of 3-5 priorities from their answer.

@@ -1,5 +1,10 @@
 # Shiproom Kit — Changelog
 
+## 1.3.0 (2026-08-05)
+- New: reference library — a context/reference/ scaffold folder for source material you own or may freely use; the researcher checks it first and reports conflicts instead of guessing (owner docs beat general knowledge).
+- /setup now asks about reference material and offers to place it for you.
+- /verify-install checks the reference folder, with a soft pass for installs made before 1.3.0.
+
 ## 1.2.0 (2026-08-02)
 - New: /setup command — first-time setup interview writes the context files for you; no manual file editing.
 - New: /verify-install command — plain pass/fail install check, including the common copied-too-deep mistake.

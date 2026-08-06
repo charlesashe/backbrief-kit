@@ -10,7 +10,7 @@ Run VERIFY-INSTALL when the owner wants to confirm the kit is wired up (or when 
    - `.claude/rules/` — expect 10 rule files; name any missing.
    - `.claude/skills/` — expect stop-slop, sop-builder, competitive-analysis, content-repurposer, each with a SKILL.md, plus THIRD-PARTY-LICENSES.md.
    - Root `CLAUDE.md` present (global `~/.claude/` install or this project).
-   - Project folders: `context/strategy/` (with the two strategy files), `inputs/`, `outputs/`, `workflows/`.
+   - Project folders: `context/strategy/` (with the two strategy files), `context/reference/`, `inputs/`, `outputs/`, `workflows/`. A missing `context/reference/` is a soft fail on installs from before 1.3.0: offer to create it.
    - Common mistake check: look for a nested `.claude/.claude/` folder — if found, say plainly that the copy went one level too deep and offer to fix it by moving the contents up.
 2. If the Business OS pack is also installed, additionally check: cmo, cfo, web, ops agents; intake, plan, grade, approve commands; ceo-gate, grading, skill-routing-business rules; 17 skills in `.claude/skills/` beyond the base four; `templates/` and `workflows/` pack files.
 3. End with one of exactly two verdicts:
