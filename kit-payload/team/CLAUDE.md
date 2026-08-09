@@ -1,6 +1,6 @@
-# Agent OS Kit
+# Shiproom Kit
 
-This is the Agent OS Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and six commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
+This is the Shiproom Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and seven commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
 
 ## The agents
 
@@ -9,7 +9,7 @@ Seven core agents do the work, and five advisors power the `/council` command.
 Core:
 
 - **orchestrator** — Coordinator. Use for multi-step work spanning more than one agent, planning, or when the right starting agent is unclear. Routes work to specialists and consolidates outputs into a clear next action.
-- **researcher** — Gathers facts, sources, prior art, and options for a decision or build. Returns findings with sources, not recommendations to ship. Checks the owner's reference library (`context/reference/`) first; documents there outrank general knowledge.
+- **researcher** — Gathers facts, sources, prior art, and options for a decision or build. Returns findings with sources, not recommendations to ship. Checks the owner's knowledgebase first (`context/reference/`, indexed in `SOURCES.md`); sources registered there outrank general knowledge.
 - **planner** — Turns a goal into an ordered plan with owners, dependencies, and acceptance criteria. Does not build; produces the plan the builder and runner execute.
 - **builder** — Produces the actual artifact (code, copy, document, config) from a plan unit and its acceptance criteria. The main "do the work" specialist.
 - **reviewer** — A quality pass on a draft before it is finished; improves clarity, correctness, and fit. Distinct from the verifier, which is the final fresh-context gate.
@@ -26,7 +26,8 @@ Council advisors (dispatched by `/council`):
 
 ## The commands
 
-- **/setup** — First-time setup interview: checks the install, then fills the two context files by asking questions instead of making the owner edit files.
+- **/next** — Says where this project stands and what to do next, then offers to run it. Works out the stage from the files on disk, so it is correct in a brand new chat. The command to reach for when unsure.
+- **/setup** — First-time setup interview: checks the install, then fills the two context files by asking questions instead of making the owner edit files. Also asks how much the owner wants the team to drive, and records it in `.claude/memory/preferences.md`.
 - **/verify-install** — Plain pass/fail check of the whole install (agents, commands, rules, skills, folders, the common nesting mistake). Safe any time.
 - **/critique** — Stress-test an offer, ICP, pricing, plan, positioning, GTM motion, or strategic decision. Skeptical investor and skeptical buyer in one pass.
 - **/council** — Run a five-advisor council on a decision: five distinct advisors, blind peer review, a chairman, and the clash.
@@ -36,6 +37,8 @@ Council advisors (dispatched by `/council`):
 ## First run
 
 If this is a fresh install (the strategy files in context/strategy/ are missing or still template placeholders), greet the owner briefly, confirm the kit looks installed in one line, and offer to run /setup. Do not launch into work or ask for a goal before setup exists; do not lecture. One warm sentence, one offer.
+
+If setup has already been done, do not re-greet. If the owner seems unsure where they are, point them at /next rather than explaining the whole loop.
 
 ## The skills
 
@@ -81,8 +84,8 @@ Every agent and every command obeys these rules. They live in `.claude/rules/` a
 
 The scaffold gives every project these locations:
 
-- **context/** — durable background; `context/strategy/current-state.md` and `current-priorities.md` are read first by every agent. `context/reference/` is the owner's reference library: trusted documents (docs, standards, style guides, books the owner has rights to) that the researcher cites first and that outrank general knowledge.
+- **context/** — durable background; `context/strategy/current-state.md` and `current-priorities.md` are read first by every agent. `context/reference/` is the owner's knowledgebase: trusted documents (docs, standards, style guides, books the owner has rights to) plus links to outside sources, all indexed in `context/reference/SOURCES.md`. The researcher cites from it first and it outranks general knowledge; /setup offers to fill it, and naming a document or link in chat is enough to have it filed and indexed.
 - **inputs/** — incoming raw materials.
 - **outputs/** — produced work; agents write here and reference it in handoffs.
 - **workflows/** — plans; active plans live in `workflows/active/`, built from `workflows/plan-template.md`.
-- **.claude/memory/decisions.md** — the human-readable decision log.
+- **.claude/memory/decisions.md** — the human-readable decision log. **.claude/memory/preferences.md** — how the owner wants the team to work with them (`guidance`), written by /setup and read by /next. The payload never overwrites `memory/`, so both survive updates.

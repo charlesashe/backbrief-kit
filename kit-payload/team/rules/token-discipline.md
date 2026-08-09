@@ -7,7 +7,7 @@ Tokens are the kit's running cost. These habits keep it low without lowering qua
 Match the model to the work, not the work to one big model:
 
 - **Cheap (Haiku)** — mechanical, verifiable work with explicit acceptance criteria: the runner.
-- **Mid (Sonnet)** — routine production and structured judgment: builder, researcher, reviewer, and the five council advisors. This is the default working tier. (Add-on packs follow the same ladder: the Business OS operations agents are pinned mid-tier too.)
+- **Mid (Sonnet)** — routine production and structured judgment: builder, researcher, reviewer, and the five council advisors. This is the default working tier. (Business OS, the paid bundle, pins its operations agents mid-tier too.)
 - **Strong (the session's top model)** — deep planning, coordination, and final verification: orchestrator, planner, verifier, and the chairman synthesis in /council. Reserve it for the passes where being wrong is expensive.
 
 Agent definitions pin their tier in frontmatter (`model:`). Do not override an agent to a stronger model for routine work; do escalate a failed unit to the strong tier rather than looping a cheap model (agent-routing rule).

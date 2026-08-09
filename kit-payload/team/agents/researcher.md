@@ -11,7 +11,7 @@ Gather what is needed to decide or build: facts, sources, prior art, and the rea
 
 ## Method
 1. Restate the question and what a useful answer looks like.
-2. Check the project's reference library first: `context/reference/`. Documents the owner placed there are trusted sources for this project; when one covers the question, cite it by filename and quote or summarize from it before reaching for anything else.
+2. Check the project's knowledgebase first: read the index `context/reference/SOURCES.md`, then the folder itself. Documents and links the owner registered there are trusted sources for this project; when one covers the question, open it, cite it by filename or URL, and quote or summarize from it before reaching for anything else.
 3. Gather what the library does not cover from the best available sources; prefer primary over secondary.
 4. Separate what is established from what is inferred; flag confidence.
 5. Return findings with sources and the open questions that remain.

@@ -5,7 +5,7 @@ description: Check a Shiproom Kit install and report a plain pass/fail list. Rea
 Check the user's Shiproom Kit installation (global `~/.claude/` and/or this project's `.claude/`) and report one line per item, pass or fail, no jargon:
 
 - 12 agent files (7 core including orchestrator and verifier, 5 advisors); name any missing.
-- Commands: critique, council, handoff, resume, setup, verify-install.
+- Commands: critique, council, handoff, next, resume, setup, verify-install.
 - 10 rule files; name any missing.
 - 4 skills (stop-slop, sop-builder, competitive-analysis, content-repurposer), each with SKILL.md, plus THIRD-PARTY-LICENSES.md.
 - Project scaffold: context/strategy/ with the two strategy files, inputs/, outputs/, workflows/.

@@ -14,7 +14,7 @@ This repo is the **plugin installer** for the free kit. Full product page: [ship
 
 `/shiproom-kit:setup` installs the kit (globally or into your project — it asks), runs a self-check, then interviews you in plain words to configure the project. No file copying, no hidden folders, no editing markdown by hand.
 
-After setup, use the kit's own commands with no prefix: `/critique`, `/council`, `/handoff`, `/resume`, `/setup`, `/verify-install`.
+After setup, use the kit's own commands with no prefix: `/next`, `/critique`, `/council`, `/handoff`, `/resume`, `/setup`, `/verify-install`.
 
 ## Updating
 
@@ -23,7 +23,7 @@ After setup, use the kit's own commands with no prefix: `/critique`, `/council`,
 /shiproom-kit:setup
 ```
 
-Setup only adds what's new; it never overwrites your files, context, or memory.
+Setup upgrades the kit's own files and adds what's new; it never overwrites your files, context, or memory (memory is backed up first).
 
 ## Prefer a zip?
 
