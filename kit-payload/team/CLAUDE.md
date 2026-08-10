@@ -1,6 +1,6 @@
-# Shiproom Kit
+# Backbrief Kit
 
-This is the Shiproom Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and seven commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
+This is the Backbrief Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and seven commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
 
 ## The agents
 

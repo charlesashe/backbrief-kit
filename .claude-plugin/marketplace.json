@@ -1,12 +1,15 @@
 {
-  "name": "shiproom",
-  "description": "Shiproom: run your Claude Code project like a team. Free kit installer; Business OS at shiproom.ai.",
-  "owner": { "name": "Charles Ashe", "url": "https://charlesashe.ai" },
+  "name": "backbrief",
+  "description": "Backbrief: run your Claude Code project like a team. Free kit installer; Backbrief Business OS at backbrief.ai.",
+  "owner": {
+    "name": "Charles Ashe",
+    "url": "https://charlesashe.ai"
+  },
   "plugins": [
     {
-      "name": "shiproom-kit",
+      "name": "backbrief-kit",
       "source": "./",
-      "description": "The free Shiproom Kit installer: agents, commands, rules, skills, and scaffold for running a Claude Code project like a team. Install, then run /shiproom-kit:setup."
+      "description": "The free Backbrief Kit installer: agents, commands, rules, skills, and scaffold for running a Claude Code project like a team. Install, then run /backbrief-kit:setup."
     }
   ]
 }

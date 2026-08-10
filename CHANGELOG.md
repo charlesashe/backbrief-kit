@@ -1,4 +1,10 @@
-# Shiproom Kit — Changelog
+# Backbrief Kit — Changelog
+
+## 2.0.0 (2026-08-10) — the rename release
+
+- The kit is renamed: the Shiproom Kit is now the **Backbrief Kit**, this plugin is now **backbrief-kit** in the **backbrief** marketplace, and the site moved to backbrief.ai (shiproom.ai redirects there). Same files, same system, new name; item counts unchanged (12 agents, 7 commands, 10 rules, 4 skills).
+- New installs: `/plugin marketplace add charlesashe/backbrief-kit`, then `/plugin install backbrief-kit@backbrief`, then `/backbrief-kit:setup`. The old `charlesashe/shiproom-kit` marketplace address still resolves (GitHub redirects it here).
+- **Already installed as shiproom-kit@shiproom?** Your installed kit keeps working. To move to the new plugin name: `/plugin uninstall shiproom-kit` (this does not touch the kit files it installed into your projects), then add and install as above. Running `/backbrief-kit:setup` afterwards upgrades your installed kit files in place — it recognizes the old Shiproom Kit stamp and never touches anything you wrote.
 
 ## 1.5.0 (2026-08-09)
 - Your knowledgebase is now a first-class part of the kit. `/setup` asks for the documents AND the links the team should work from — digital books, guides, product docs, a docs site, a Notion page — copies the files into `context/reference/`, and records every source in a new index, `context/reference/SOURCES.md`, with a note on when to use it. Links finally have a home: they live as rows in that index.
