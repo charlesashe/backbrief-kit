@@ -1,6 +1,6 @@
 # Backbrief Kit — Claude Code plugin
 
-Run your Claude Code project like a team: an orchestrator that plans and routes, 12 specialist agents, a fresh-context verifier that gates finished work, 10 rules, 4 bundled skills, and project memory that survives across chats (/handoff + /resume).
+Run your Claude Code project like a team: 12 agents — including an orchestrator that plans and routes and a fresh-context verifier that gates finished work — plus 10 rules, 4 bundled skills, and project memory that survives across chats (/handoff + /resume).
 
 This repo is the **plugin installer** for the free kit. Full product page: [backbrief.ai](https://backbrief.ai) · built by [Charles Ashe](https://charlesashe.ai).
 
