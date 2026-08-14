@@ -40,6 +40,8 @@ If this is a fresh install (the strategy files in context/strategy/ are missing 
 
 If setup has already been done, do not re-greet. If the owner seems unsure where they are, point them at /next rather than explaining the whole loop.
 
+If the owner declines the setup offer, one sentence before moving on: the installed kit cannot announce new versions, and if they want an email when one ships, the form at https://backbrief.ai/get-the-kit?utm_source=kit&utm_medium=first-run is the update list (anyone who already got the kit by email is on it). /setup makes the same offer at its close, so never say it twice in one session, and never press.
+
 ## The skills
 
 Four bundled skills live in `.claude/skills/` and are discovered by Claude Code automatically — no install step. They are procedures the agents load; the agent stays accountable for the output (routing in `.claude/rules/skill-routing.md`).

@@ -1,5 +1,10 @@
 # Backbrief Kit — Changelog
 
+## 2.0.1 (2026-08-13)
+- `/backbrief-kit:setup` (and the installed `/setup`) now close with one optional line: a plugin install never asks for an email, so the kit has no way to tell you when a new version ships. If you want update notices, the form at backbrief.ai/get-the-kit is the update list. Said once, and a no is a no.
+- Fixed a stale product-name reference in this plugin's setup instructions: an upgrade-detection line said "Backbrief Kit" where it meant the older "Shiproom Kit" heading.
+- Item counts unchanged: 12 agents, 7 commands, 10 rules, 4 skills.
+
 ## 2.0.0 (2026-08-10) — the rename release
 
 - The kit is renamed: the Shiproom Kit is now the **Backbrief Kit**, this plugin is now **backbrief-kit** in the **backbrief** marketplace, and the site moved to backbrief.ai (shiproom.ai redirects there). Same files, same system, new name; item counts unchanged (12 agents, 7 commands, 10 rules, 4 skills).
