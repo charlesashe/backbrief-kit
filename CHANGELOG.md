@@ -1,5 +1,10 @@
 # Backbrief Kit — Changelog
 
+## 2.1.0 (2026-08-14)
+- New command **/grade-idea**. Give it a sentence or two (what it is, who pays, any numbers you already have) and it runs the same five advisors from /council against the public six-dimension rubric, no plan document required. It returns a scorecard: a score per dimension, the average, the 8.5 pass line, a letter grade, and the lowest-scoring dimension, or the tied set, named plainly.
+- This is a stress-test, not a certification. The command says so every run: a pass means no confident weakness was left un-named, not that the idea will work. A thin description caps what can be scored, and the scorecard names the gaps instead of manufacturing six confident numbers to fill the space.
+- Item counts are now 12 agents, 8 commands, 10 rules, 4 skills.
+
 ## 2.0.1 (2026-08-13)
 - `/backbrief-kit:setup` (and the installed `/setup`) now close with one optional line: a plugin install never asks for an email, so the kit has no way to tell you when a new version ships. If you want update notices, the form at backbrief.ai/get-the-kit is the update list. Said once, and a no is a no.
 - Fixed a stale product-name reference in this plugin's setup instructions: an upgrade-detection line said "Backbrief Kit" where it meant the older "Shiproom Kit" heading.

@@ -10,7 +10,7 @@ Start by reporting the installed version from `.claude/VERSION` (for example "Ba
 
 1. Check each item and print a one-line result per row, pass or fail, no jargon:
    - `.claude/agents/` — expect 12 agent files (7 core + 5 advisors); name any that are missing.
-   - `.claude/commands/` — expect next, critique, council, handoff, resume, setup, verify-install (7 total).
+   - `.claude/commands/` — expect next, critique, council, grade-idea, handoff, resume, setup, verify-install (8 total).
    - `.claude/rules/` — expect 10 rule files; name any missing.
    - `.claude/skills/` — expect stop-slop, sop-builder, competitive-analysis, content-repurposer, each with a SKILL.md, plus THIRD-PARTY-LICENSES.md.
    - Root `CLAUDE.md` present (global `~/.claude/` install or this project).

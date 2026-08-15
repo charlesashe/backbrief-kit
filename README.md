@@ -14,7 +14,7 @@ This repo is the **plugin installer** for the free kit. Full product page: [back
 
 `/backbrief-kit:setup` installs the kit (globally or into your project — it asks), runs a self-check, then interviews you in plain words to configure the project. No file copying, no hidden folders, no editing markdown by hand.
 
-After setup, use the kit's own commands with no prefix: `/next`, `/critique`, `/council`, `/handoff`, `/resume`, `/setup`, `/verify-install`.
+After setup, use the kit's own commands with no prefix: `/next`, `/critique`, `/council`, `/grade-idea`, `/handoff`, `/resume`, `/setup`, `/verify-install`.
 
 ## Updating
 

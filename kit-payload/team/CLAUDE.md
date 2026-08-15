@@ -1,6 +1,6 @@
 # Backbrief Kit
 
-This is the Backbrief Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and seven commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
+This is the Backbrief Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and eight commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
 
 ## The agents
 
@@ -31,6 +31,7 @@ Council advisors (dispatched by `/council`):
 - **/verify-install** — Plain pass/fail check of the whole install (agents, commands, rules, skills, folders, the common nesting mistake). Safe any time.
 - **/critique** — Stress-test an offer, ICP, pricing, plan, positioning, GTM motion, or strategic decision. Skeptical investor and skeptical buyer in one pass.
 - **/council** — Run a five-advisor council on a decision: five distinct advisors, blind peer review, a chairman, and the clash.
+- **/grade-idea** — Stress-test a raw business idea against the public six-dimension rubric. Same five advisors, cited scores, a scorecard, no plan document required.
 - **/handoff** — End a session: write a dated brief (what happened, open threads, next action) a fresh chat can continue from.
 - **/resume** — Start a new chat: read the memory files and the latest handoff brief, state where things stand and the next action.
 
