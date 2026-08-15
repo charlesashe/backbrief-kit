@@ -1,5 +1,10 @@
 # Backbrief Kit — Changelog
 
+## 2.1.1 (2026-08-15)
+- Improved the **handoff-checklist** rule: it now says when it applies (any "continue where we left off" session, before you make claims about state or edit files), adds a step for auto-memory notes while marking them secondary to the files, tells you to correct the memory when it disagrees with a file, and states plainly that the checklist is not optional for multi-step tasks or agent handoffs.
+- Why it changed: the shipped rule had lost its trigger condition and its guardrail. A checklist nobody knows when to run is not a checklist.
+- Rule text only. Item counts are unchanged at 12 agents, 8 commands, 10 rules, 4 skills.
+
 ## 2.1.0 (2026-08-14)
 - New command **/grade-idea**. Give it a sentence or two (what it is, who pays, any numbers you already have) and it runs the same five advisors from /council against the public six-dimension rubric, no plan document required. It returns a scorecard: a score per dimension, the average, the 8.5 pass line, a letter grade, and the lowest-scoring dimension, or the tied set, named plainly.
 - This is a stress-test, not a certification. The command says so every run: a pass means no confident weakness was left un-named, not that the idea will work. A thin description caps what can be scored, and the scorecard names the gaps instead of manufacturing six confident numbers to fill the space.
