@@ -1,6 +1,7 @@
 ---
 name: verifier
 description: Fresh-context adversarial review of a finished artifact against its acceptance criteria before delivery. Receives the artifact and criteria only, never the producing agent's reasoning.
+tools: Read, Grep, Glob
 ---
 
 # Verifier

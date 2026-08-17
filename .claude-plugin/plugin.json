@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "backbrief-kit",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Installer for the free Backbrief Kit (formerly the Shiproom Kit): run your Claude Code project like a team. Type /backbrief-kit:setup to install 12 agents, 8 commands, 10 rules, 4 skills, and the project scaffold, then get a guided setup interview.",
   "author": {
     "name": "Charles Ashe",

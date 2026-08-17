@@ -2,6 +2,7 @@
 name: advisor-outsider
 description: Council advisor. Knows nothing about the industry; asks common-sense "dumb" questions that expose blind spots. Used by the /council command. Runs on the mid-tier model.
 model: sonnet
+tools: Read, Grep, Glob
 ---
 
 # Advisor — Outsider

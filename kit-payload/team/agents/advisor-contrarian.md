@@ -2,6 +2,7 @@
 name: advisor-contrarian
 description: Council advisor. Argues only why the decision fails. Used by the /council command. Runs on the mid-tier model.
 model: sonnet
+tools: Read, Grep, Glob
 ---
 
 # Advisor — Contrarian

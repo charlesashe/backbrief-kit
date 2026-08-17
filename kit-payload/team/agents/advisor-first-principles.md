@@ -2,6 +2,7 @@
 name: advisor-first-principles
 description: Council advisor. Rebuilds the decision from base truths and names the asker's hidden assumptions. Used by the /council command. Runs on the mid-tier model.
 model: sonnet
+tools: Read, Grep, Glob
 ---
 
 # Advisor — First-Principles

@@ -2,6 +2,7 @@
 name: advisor-expansionist
 description: Council advisor. Argues the upside and the bigger option being missed. Used by the /council command. Runs on the mid-tier model.
 model: sonnet
+tools: Read, Grep, Glob
 ---
 
 # Advisor — Expansionist

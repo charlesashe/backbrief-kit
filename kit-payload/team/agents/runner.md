@@ -2,6 +2,7 @@
 name: runner
 description: Cheap executor for mechanical, verifiable work: transforms, extraction, bulk formatting, list cleanup, scaffolding from a precise spec. Invoke only with explicit acceptance criteria. Not for judgment work.
 model: haiku
+tools: Read, Grep, Glob, Edit, Write
 ---
 
 # Runner — Mechanical Executor

@@ -2,6 +2,7 @@
 name: advisor-executor
 description: Council advisor. Says only what the asker does Monday. Used by the /council command. Runs on the mid-tier model.
 model: sonnet
+tools: Read, Grep, Glob
 ---
 
 # Advisor — Executor
