@@ -1,5 +1,15 @@
 # Backbrief Kit — Changelog
 
+## 2.2.1 (2026-08-18)
+
+- `escalation.md` describes the paid bundle's enforcement layer accurately. It had said the layer is "off unless you turn it on", which is wrong for a fresh install: the installer recommends it and turns it on when you state no preference. Only a setup you already run is strictly off-unless-yes. The same sentence also left out that the layer guards the files it lives in, not just outward shell commands.
+- The payload version stamp said 2.1.1 while the plugin said 2.2.0. Both now read 2.2.1.
+
+## 2.2.0 (2026-08-18)
+
+- `escalation.md` now says plainly what the rule is and is not: the team is instructed to stop before anything outward, a model follows that instruction, and nothing in the kit technically blocks the action. Same policy as before, described accurately.
+- The council advisors and the verifier can no longer write files, and the runner can no longer reach the network. A review agent that could quietly edit the thing it was reviewing was never an independent review.
+
 ## 2.1.1 (2026-08-15)
 - Improved the **handoff-checklist** rule: it now says when it applies (any "continue where we left off" session, before you make claims about state or edit files), adds a step for auto-memory notes while marking them secondary to the files, tells you to correct the memory when it disagrees with a file, and states plainly that the checklist is not optional for multi-step tasks or agent handoffs.
 - Why it changed: the shipped rule had lost its trigger condition and its guardrail. A checklist nobody knows when to run is not a checklist.
