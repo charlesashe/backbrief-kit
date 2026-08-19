@@ -1,5 +1,11 @@
 # Backbrief Kit — Changelog
 
+## 2.2.3 (2026-08-19)
+
+- The license said "DRAFT, have an attorney review before first distribution" and was titled "Shiproom Kit License", a product name retired two releases ago. The draft marker was an internal note that shipped by mistake. It now carries the same honest line the paid bundle has carried since 3.2.2: this license has not yet had attorney review, and it will be updated through the free updates channel when it has. No right, restriction, or permission changed.
+- The MIT attribution clause pointed at `kit/.claude/skills/`, a path that does not exist in this repository. It now points at `kit-payload/team/skills/`, where the third-party notices actually live. That clause is how anyone finds the MIT notices, so a dead pointer there mattered more than a broken link usually does.
+- No change to any agent, command, rule, or skill.
+
 ## 2.2.2 (2026-08-18)
 
 - The plugin description no longer counts its own parts. It used to say "12 agents, 8 commands, 10 rules, 4 skills", which is true today and has been wrong before: a stale count string sat live in public for six days earlier this month, and counts move on almost every release. The description now says what the kit does (an orchestrator that plans and routes, a fresh-context verifier that checks work before it ships, project memory that survives across sessions) and leaves the arithmetic to the repo.

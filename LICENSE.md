@@ -1,8 +1,8 @@
-# Shiproom Kit License
+# Backbrief Kit License
 
 Copyright (c) 2026 Charles Ashe / Meridian Gable Corporation
 
-**DRAFT — have an attorney review before first distribution.**
+**This license has not yet had attorney review. It will be updated through the free updates channel when it has.**
 
 ## What you may do
 
@@ -18,7 +18,7 @@ Copyright (c) 2026 Charles Ashe / Meridian Gable Corporation
 
 ## Third-party components
 
-The skills in `kit/.claude/skills/` are third-party work under the MIT License (see `kit/.claude/skills/THIRD-PARTY-LICENSES.md` and each skill folder's LICENSE). **The restrictions above do not and cannot apply to those MIT components** — the MIT License governs them, and it permits redistribution and commercial use of those files on its own terms. The restrictions above cover the original Shiproom material: the agents, commands, rules, scaffold, documentation, worked example, and the integration of the whole.
+The skills in `kit-payload/team/skills/` are third-party work under the MIT License (see `kit-payload/team/skills/THIRD-PARTY-LICENSES.md` and each skill folder's LICENSE). **The restrictions above do not and cannot apply to those MIT components** — the MIT License governs them, and it permits redistribution and commercial use of those files on its own terms. The restrictions above cover the original Backbrief material: the agents, commands, rules, scaffold, documentation, worked example, and the integration of the whole.
 
 ## No warranty
 
