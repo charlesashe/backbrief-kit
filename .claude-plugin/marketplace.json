@@ -9,7 +9,9 @@
     {
       "name": "backbrief-kit",
       "source": "./",
-      "description": "The free Backbrief Kit installer: agents, commands, rules, skills, and scaffold for running a Claude Code project like a team. Install, then run /backbrief-kit:setup."
+      "description": "Run a Claude Code project like a team instead of one long chat: an orchestrator that plans and routes to specialist agents, a fresh-context verifier that checks work before it ships, and project memory that survives across sessions.",
+      "category": "productivity",
+      "homepage": "https://backbrief.ai"
     }
   ]
 }

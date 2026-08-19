@@ -1,5 +1,11 @@
 # Backbrief Kit — Changelog
 
+## 2.2.2 (2026-08-18)
+
+- The plugin description no longer counts its own parts. It used to say "12 agents, 8 commands, 10 rules, 4 skills", which is true today and has been wrong before: a stale count string sat live in public for six days earlier this month, and counts move on almost every release. The description now says what the kit does (an orchestrator that plans and routes, a fresh-context verifier that checks work before it ships, project memory that survives across sessions) and leaves the arithmetic to the repo.
+- The marketplace entry gained a category (productivity) and a homepage, and the plugin manifest gained a license line pointing at LICENSE.md. These are the fields a directory listing reads.
+- No change to any agent, command, rule, or skill. Installing this over 2.2.1 changes metadata only.
+
 ## 2.2.1 (2026-08-18)
 
 - `escalation.md` describes the paid bundle's enforcement layer accurately. It had said the layer is "off unless you turn it on", which is wrong for a fresh install: the installer recommends it and turns it on when you state no preference. Only a setup you already run is strictly off-unless-yes. The same sentence also left out that the layer guards the files it lives in, not just outward shell commands.

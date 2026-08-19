@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "backbrief-kit",
-  "version": "2.2.1",
-  "description": "Installer for the free Backbrief Kit (formerly the Shiproom Kit): run your Claude Code project like a team. Type /backbrief-kit:setup to install 12 agents, 8 commands, 10 rules, 4 skills, and the project scaffold, then get a guided setup interview.",
+  "version": "2.2.2",
+  "description": "Run a Claude Code project like a team instead of one long chat. An orchestrator plans the work and routes it to specialist agents, a fresh-context verifier checks finished artifacts before they ship, and project memory carries state across sessions with /handoff and /resume. Install, then run /backbrief-kit:setup for a guided setup.",
   "author": {
     "name": "Charles Ashe",
     "url": "https://charlesashe.ai"
@@ -14,6 +14,9 @@
     "orchestrator",
     "verification",
     "project-memory",
+    "planning",
+    "workflow",
     "backbrief"
-  ]
+  ],
+  "license": "See LICENSE.md (free to use and share unmodified, not to resell)"
 }
