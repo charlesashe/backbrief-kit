@@ -1,5 +1,10 @@
 # Backbrief Kit — Changelog
 
+## 2.3.1 (2026-08-21)
+
+- **Corrects one claim in `/verify-install`.** It said `/resume` and `/plan` are both "taken by built-ins". Only `/resume` is: typing it opens Claude Code's session picker and a command file of that name never runs, which is observed and reproducible. `/plan`, which this kit does not ship, is contested rather than dead - a command file of that name does run in the Claude Code desktop app - and the 2.3.0 wording overstated it.
+- **No payload behavior change.** Every agent, command, rule and skill is identical to 2.3.0. The `/resume` to `/pickup` rename is unaffected and stands.
+
 ## 2.3.0 (2026-08-21)
 
 - **`/resume` was renamed to `/pickup`, because typing `/resume` never reached this kit's file.** Claude Code ships a built-in `/resume` that opens a session picker, and it wins the name outright. The kit documented `/resume` in its README, its plugin listing, its session-hygiene rule, and the closing line of `/handoff`, so anyone who followed the instructions got a session picker with nothing explaining why. The command's behavior is unchanged; only the name is. `resume.md` stays in the payload as a signpost that names the replacement.
