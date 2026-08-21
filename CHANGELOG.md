@@ -1,5 +1,10 @@
 # Backbrief Kit — Changelog
 
+## 2.3.2 (2026-08-21)
+
+- **Corrects one sentence in the 2.3.0 entry below, which is corrected in place so nobody reads the wrong description while scrolling back.** It said `resume.md` stays in the payload as a signpost. It does not: the stub was removed before 2.3.0 shipped, because a file in `commands/` that cannot be typed inflates a command count three shipped documents assert. `/verify-install` detects a leftover `resume.md` from an older install and offers to remove it instead, which is what the payload actually does.
+- **No payload change of any kind.** Every agent, command, rule and skill is byte-identical to 2.3.1. This release exists so the changelog is not lying about the contents of the download it describes.
+
 ## 2.3.1 (2026-08-21)
 
 - **Corrects one claim in `/verify-install`.** It said `/resume` and `/plan` are both "taken by built-ins". Only `/resume` is: typing it opens Claude Code's session picker and a command file of that name never runs, which is observed and reproducible. `/plan`, which this kit does not ship, is contested rather than dead - a command file of that name does run in the Claude Code desktop app - and the 2.3.0 wording overstated it.
@@ -7,7 +12,7 @@
 
 ## 2.3.0 (2026-08-21)
 
-- **`/resume` was renamed to `/pickup`, because typing `/resume` never reached this kit's file.** Claude Code ships a built-in `/resume` that opens a session picker, and it wins the name outright. The kit documented `/resume` in its README, its plugin listing, its session-hygiene rule, and the closing line of `/handoff`, so anyone who followed the instructions got a session picker with nothing explaining why. The command's behavior is unchanged; only the name is. `resume.md` stays in the payload as a signpost that names the replacement.
+- **`/resume` was renamed to `/pickup`, because typing `/resume` never reached this kit's file.** Claude Code ships a built-in `/resume` that opens a session picker, and it wins the name outright. The kit documented `/resume` in its README, its plugin listing, its session-hygiene rule, and the closing line of `/handoff`, so anyone who followed the instructions got a session picker with nothing explaining why. The command's behavior is unchanged; only the name is. No stub file ships: a file in `commands/` that cannot be typed inflates a command count this kit's own documentation asserts, so `/verify-install` detects a leftover `resume.md` from an older install and offers to remove it instead.
 - **Why the checker never caught it.** A built-in command lives in neither `~/.claude/commands/` nor `~/.claude/skills/`, and those were the only two places `/verify-install` compared against. It reported a clean install with total confidence while a documented command was unreachable. `/verify-install` now checks the built-in namespace as a third case and tells you how to test a name in ten seconds.
 - **`/pickup` also gained the read discipline `/resume` never had.** It now reads an append-only decision log by its tail rather than whole. A plain read returns the TOP of a file, so "the last 5 entries" silently became the OLDEST five on any project with a long log, and the session carried on believing it held current context. That failure is silent, which is what made it worth a step of its own.
 - Upgrading from 2.2.x: run `/pickup` where you used to run `/resume`. Nothing else changes.
