@@ -33,7 +33,7 @@ Council advisors (dispatched by `/council`):
 - **/council** — Run a five-advisor council on a decision: five distinct advisors, blind peer review, a chairman, and the clash.
 - **/grade-idea** — Stress-test a raw business idea against the public six-dimension rubric. Same five advisors, cited scores, a scorecard, no plan document required.
 - **/handoff** — End a session: write a dated brief (what happened, open threads, next action) a fresh chat can continue from.
-- **/resume** — Start a new chat: read the memory files and the latest handoff brief, state where things stand and the next action.
+- **/pickup** — Start a new chat: read the memory files and the latest handoff brief, state where things stand and the next action.
 
 ## First run
 
@@ -65,7 +65,7 @@ Every agent and every command obeys these rules. They live in `.claude/rules/` a
 - **context-first.md** — Read `context/strategy/current-state.md` and `current-priorities.md` before producing work; if they are missing or stale, say so and propose an update.
 - **decision-log.md** — Record significant choices in `.claude/memory/decisions.md` with a date and a one-sentence decision.
 - **handoff-checklist.md** — Before asserting project state, re-read the root CLAUDE.md, the relevant rules, and the decision log; files win over recollection.
-- **session-hygiene.md** — End sessions with /handoff, start new chats with /resume, and break to a fresh chat at phase boundaries. Get ahead of the compaction wall: /handoff and go fresh before the tool auto-compacts, never after.
+- **session-hygiene.md** — End sessions with /handoff, start new chats with /pickup, and break to a fresh chat at phase boundaries. Get ahead of the compaction wall: /handoff and go fresh before the tool auto-compacts, never after.
 - **skill-routing.md** — Which bundled skill each agent loads for its domain, and the standing stop-slop gate on prose.
 - **token-discipline.md** — Match the model to the work (Haiku for mechanical, Sonnet for routine production, the strong model for planning and verification); plan once on the strong model, execute cheap; small dispatches with named files; output budgets on every agent; keep CLAUDE.md an index.
 

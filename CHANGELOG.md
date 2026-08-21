@@ -1,5 +1,12 @@
 # Backbrief Kit — Changelog
 
+## 2.3.0 (2026-08-21)
+
+- **`/resume` was renamed to `/pickup`, because typing `/resume` never reached this kit's file.** Claude Code ships a built-in `/resume` that opens a session picker, and it wins the name outright. The kit documented `/resume` in its README, its plugin listing, its session-hygiene rule, and the closing line of `/handoff`, so anyone who followed the instructions got a session picker with nothing explaining why. The command's behavior is unchanged; only the name is. `resume.md` stays in the payload as a signpost that names the replacement.
+- **Why the checker never caught it.** A built-in command lives in neither `~/.claude/commands/` nor `~/.claude/skills/`, and those were the only two places `/verify-install` compared against. It reported a clean install with total confidence while a documented command was unreachable. `/verify-install` now checks the built-in namespace as a third case and tells you how to test a name in ten seconds.
+- **`/pickup` also gained the read discipline `/resume` never had.** It now reads an append-only decision log by its tail rather than whole. A plain read returns the TOP of a file, so "the last 5 entries" silently became the OLDEST five on any project with a long log, and the session carried on believing it held current context. That failure is silent, which is what made it worth a step of its own.
+- Upgrading from 2.2.x: run `/pickup` where you used to run `/resume`. Nothing else changes.
+
 ## 2.2.3 (2026-08-19)
 
 - The license said "DRAFT, have an attorney review before first distribution" and was titled "Shiproom Kit License", a product name retired two releases ago. The draft marker was an internal note that shipped by mistake. It now carries the same honest line the paid bundle has carried since 3.2.2: this license has not yet had attorney review, and it will be updated through the free updates channel when it has. No right, restriction, or permission changed.

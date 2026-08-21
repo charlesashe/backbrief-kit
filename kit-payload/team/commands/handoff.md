@@ -9,6 +9,6 @@ Run HANDOFF at the end of a work session, before the chat is closed.
 3. Write .claude/memory/handoffs/YYYY-MM-DD-<short-slug>.md (create the folder if missing) with exactly these sections: What happened; Decisions recorded; Open threads; Next action (one, concrete, starts with a verb); Files touched.
 4. If the project's overall picture changed, refresh context/strategy/current-state.md (one-paragraph snapshot).
 5. The brief must stand alone: a new chat with zero context should be able to continue from it. No "as discussed above."
-6. End your reply with exactly: "Handoff saved. Start your next chat with /resume."
+6. End your reply with exactly: "Handoff saved. Start your next chat with /pickup."
 
 Plain-language note: with a non-technical owner, call this "saving your progress note." No jargon.

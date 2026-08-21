@@ -28,4 +28,4 @@ The root CLAUDE.md is an index, not a spec: what exists and where it lives, in a
 
 ## Fresh chats are cheaper chats
 
-A long thread re-reads its own history on every turn. Per the session-hygiene rule: /handoff at the end of a session, /clear (or a fresh chat) between tasks, /resume to start the next one from files. One thread per work session or sprint phase — never one thread for days.
+A long thread re-reads its own history on every turn. Per the session-hygiene rule: /handoff at the end of a session, /clear (or a fresh chat) between tasks, /pickup to start the next one from files. One thread per work session or sprint phase — never one thread for days.

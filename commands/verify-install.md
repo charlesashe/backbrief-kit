@@ -5,7 +5,8 @@ description: Check a Backbrief Kit install and report a plain pass/fail list. Re
 Check the user's Backbrief Kit installation (global `~/.claude/` and/or this project's `.claude/`) and report one line per item, pass or fail, no jargon:
 
 - 12 agent files (7 core including orchestrator and verifier, 5 advisors); name any missing.
-- Commands: critique, council, grade-idea, handoff, next, resume, setup, verify-install.
+- Commands: critique, council, grade-idea, handoff, next, pickup, setup, verify-install (8 total). A leftover `resume.md` from before 2.3.0 can never run and should be offered for deletion.
+- Name collisions with Claude Code's built-ins: a built-in is in neither `~/.claude/commands/` nor `~/.claude/skills/`, so it is invisible to a folder comparison. `/resume` and `/plan` are taken by built-ins; this kit ships `/pickup` instead and no longer collides. If a future Claude Code release takes another of the names above, typing it will silently reach the built-in. Type `/` in an interactive session to see the current built-in names.
 - 10 rule files; name any missing.
 - 4 skills (stop-slop, sop-builder, competitive-analysis, content-repurposer), each with SKILL.md, plus THIRD-PARTY-LICENSES.md.
 - Project scaffold: context/strategy/ with the two strategy files, inputs/, outputs/, workflows/.

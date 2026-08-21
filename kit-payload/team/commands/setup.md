@@ -6,7 +6,7 @@ Run SETUP once per project, right after installing the kit. It replaces "go edit
 
 1. Check the install first. Confirm these exist and say so in one line each (a green check or a plain statement of what is missing):
    - `.claude/agents/` with the orchestrator and verifier present
-   - `.claude/commands/` with critique, council, handoff, resume
+   - `.claude/commands/` with critique, council, handoff, pickup
    - `.claude/rules/` with at least the escalation rule
    - `.claude/skills/` (four bundled skills)
    - `context/strategy/`, `inputs/`, `outputs/`, `workflows/` folders
@@ -29,7 +29,7 @@ Run SETUP once per project, right after installing the kit. It replaces "go edit
    - Extra constraints go in `current-priorities.md` as a "House rules" line, and anything already-decided becomes the first entry in `.claude/memory/decisions.md` (create the file if needed).
    - `.claude/memory/preferences.md` — write `guidance:` from their answer (create the file from the scaffold template if it is missing). This lives in `memory/` on purpose, because the payload never overwrites that folder, so the setting survives every future update.
 4. Read the two files back to the owner in under 100 words and ask if anything is wrong. Fix what they correct.
-5. Close with exactly this orientation: "Setup is done. State a goal in plain words and the team will plan it, build it, and verify it. If you are ever unsure what to do, type /next and I will tell you where you stand. Also useful: /critique to stress-test an idea, /council for a five-advisor debate, /handoff to end a session, /resume to start the next one."
+5. Close with exactly this orientation: "Setup is done. State a goal in plain words and the team will plan it, build it, and verify it. If you are ever unsure what to do, type /next and I will tell you where you stand. Also useful: /critique to stress-test an idea, /council for a five-advisor debate, /handoff to end a session, /pickup to start the next one."
 6. Then one last line, optional and said once: the installed kit has no way to announce a new version. If they want an email when a meaningful update ships, the form at https://backbrief.ai/get-the-kit?utm_source=kit&utm_medium=setup-invite is the update list. It is the same form that sends the download link, so anyone who already got the kit by email is on it. One sentence in your own words, take no for an answer, and never raise it again. Skip it entirely if the first-run greeting already made this offer earlier in the session.
 
 Keep the whole thing under ten minutes. No jargon. If the owner says "skip" to any question, write a sensible placeholder and mark it with "(fill in later)".

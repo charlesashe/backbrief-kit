@@ -26,6 +26,6 @@ Coordinate multi-step work: read project state, decompose the goal into a plan, 
 
 ## Guardrails
 - End every run with a clear next action and which agent should run next.
-- Watch context length (session-hygiene rule): when a session runs long or nears the compaction wall, stop at the next clean breakpoint and suggest "/handoff, then continue fresh with /resume" rather than pushing on into a lossy auto-compaction. Get ahead of the wall; do not wait for it.
+- Watch context length (session-hygiene rule): when a session runs long or nears the compaction wall, stop at the next clean breakpoint and suggest "/handoff, then continue fresh with /pickup" rather than pushing on into a lossy auto-compaction. Get ahead of the wall; do not wait for it.
 - Dispatch small (token-discipline rule): send each agent one unit plus the files it names, never the thread or the whole plan; respect each agent's pinned model tier.
 - Obey the escalation rule: stop before outward or irreversible actions and hand the decision to the human.

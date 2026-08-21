@@ -19,7 +19,7 @@ First match wins:
 | `context/strategy/` missing, or both files still template placeholders | not set up | `/setup` |
 | set up, nothing in `workflows/active/` and nothing in `outputs/` | ready to work | state a goal in plain words; the orchestrator plans it, routes it, and gates the result through the verifier |
 | a plan in `workflows/active/` with units not yet done | mid-run | the next unfinished unit in that plan |
-| work in `outputs/` and the plan's units are done | finished a piece | `/handoff` to close the session cleanly, then `/resume` next time |
+| work in `outputs/` and the plan's units are done | finished a piece | `/handoff` to close the session cleanly, then `/pickup` next time |
 
 If `/critique` or `/council` would genuinely help right here, mention it as optional and say why in one line. Never insert them as a required step and never run them without being asked.
 
