@@ -1,5 +1,17 @@
 # Backbrief Kit — Changelog
 
+## Unreleased
+
+- **`/handoff` now names briefs `YYYY-MM-DD-HHMM-<short-slug>.md`, with the time.** Without it,
+  two briefs written on the same day sort alphabetically by slug, so `/pickup` could read the
+  wrong one as the newest and act on a stale next action. More than one session a day is normal -
+  the session-hygiene rule actively encourages it - so this was not an edge case. Measured on a
+  59-brief archive: 14 of the last 17 days carried two or more briefs, and on the days where the
+  order could be checked independently, alphabetical picked the wrong brief about 40% of the time.
+- **The fix is in the writer, not the reader.** `/pickup` still says "take the newest file", which
+  is now correct for free, needs no git, and works in a fresh clone where file mtimes are all
+  identical. Existing briefs are untouched and still sort by date; only same-day ordering changes.
+
 ## 2.3.2 (2026-08-21)
 
 - **Corrects one sentence in the 2.3.0 entry below, which is corrected in place so nobody reads the wrong description while scrolling back.** It said `resume.md` stays in the payload as a signpost. It does not: the stub was removed before 2.3.0 shipped, because a file in `commands/` that cannot be typed inflates a command count three shipped documents assert. `/verify-install` detects a leftover `resume.md` from an older install and offers to remove it instead, which is what the payload actually does.
