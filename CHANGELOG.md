@@ -1,5 +1,9 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.4.1 (2026-08-22)
+
+- **Documentation only, no payload behavior change.** The user guide's memory-layer cost sentence now states the whole range: roughly five hundred tokens in the common case, up to about fifteen hundred when a short brief loads whole. Every agent, command, rule, script and skill is byte-identical to the previous release.
+
 ## 2.4.0 (2026-08-22)
 
 - **New: automatic memory layer, opt-in.** A small SessionStart hook can recall the newest handoff brief and the tail of the decision log at the start of a session, so the team starts already knowing where the project stands, and the recall comes back after a compaction wipe too. The installer asks once per project; it lives in `kit/memory-layer/` and never touches `.claude/memory/` itself.
