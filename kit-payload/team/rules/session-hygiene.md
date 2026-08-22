@@ -6,7 +6,7 @@ Chats degrade as they grow. The project's memory lives in files, not in the chat
 - Good breakpoints for a fresh chat: after an approval decision, after a build or major unit completes, when switching to an unrelated goal, or when a long chat starts responding slowly or repeating itself.
 - At a phase boundary, the orchestrator ends its run by suggesting: "Good breakpoint. Run /handoff, then continue in a fresh chat with /pickup."
 - A handoff brief must stand alone. If continuing from it requires remembering the previous chat, the brief is incomplete.
-- Token hygiene (token-discipline rule): a long thread re-reads its own history on every turn. /clear between unrelated tasks, /compact only when mid-task context must survive, and never one thread for days — one per work session or sprint phase.
+- Token hygiene (token-discipline rule): a long thread re-reads its own history on every turn. /clear between unrelated tasks, /compact only when mid-task context must survive, and never one thread for days: one per work session or sprint phase.
 
 ## Get ahead of the compaction wall (do not wait for it)
 

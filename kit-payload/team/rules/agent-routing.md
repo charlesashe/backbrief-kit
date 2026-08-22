@@ -16,6 +16,6 @@ Jurisdiction and regulated claims:
 - Until that check has run, label the point in the output as an unverified local-law assumption and name the jurisdiction. Never reason past it silently.
 
 Cost routing (see token-discipline for the full model ladder):
-- Mechanical, fully-specified work goes to the runner (Haiku). Routine production and structured judgment — builder, researcher, reviewer, council advisors — run on the mid tier (Sonnet), pinned in their definitions. Deep planning, coordination, and final verification — planner, orchestrator, verifier — stay on the strong model.
+- Mechanical, fully-specified work goes to the runner (Haiku). Routine production and structured judgment (builder, researcher, reviewer, council advisors) run on the mid tier (Sonnet), pinned in their definitions. Deep planning, coordination, and final verification (planner, orchestrator, verifier) stay on the strong model.
 - Cap runner retries at two; on the second failure, escalate to a strong model instead of looping.
 - Never run an unattended loop without an iteration cap and stop criteria.

@@ -75,6 +75,6 @@ Plot competitors on 2 key dimensions (e.g., price vs. quality, simple vs. featur
 ```
 
 ## Constraints
-- Don't fabricate competitor data — note what's estimated vs. verified
+- Don't fabricate competitor data: note what's estimated vs. verified
 - Focus on actionable insights, not comprehensive catalogs
 - Positioning should be based on real advantages, not aspirational claims

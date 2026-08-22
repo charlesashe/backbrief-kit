@@ -1,16 +1,9 @@
-# Backbrief Kit — Changelog
+# Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
-## Unreleased
+## 2.4.0 (2026-08-22)
 
-- **`/handoff` now names briefs `YYYY-MM-DD-HHMM-<short-slug>.md`, with the time.** Without it,
-  two briefs written on the same day sort alphabetically by slug, so `/pickup` could read the
-  wrong one as the newest and act on a stale next action. More than one session a day is normal -
-  the session-hygiene rule actively encourages it - so this was not an edge case. Measured on a
-  59-brief archive: 14 of the last 17 days carried two or more briefs, and on the days where the
-  order could be checked independently, alphabetical picked the wrong brief about 40% of the time.
-- **The fix is in the writer, not the reader.** `/pickup` still says "take the newest file", which
-  is now correct for free, needs no git, and works in a fresh clone where file mtimes are all
-  identical. Existing briefs are untouched and still sort by date; only same-day ordering changes.
+- **New: automatic memory layer, opt-in.** A small SessionStart hook can recall the newest handoff brief and the tail of the decision log at the start of a session, so the team starts already knowing where the project stands, and the recall comes back after a compaction wipe too. The installer asks once per project; it lives in `kit/memory-layer/` and never touches `.claude/memory/` itself.
+- **Em-dash sweep.** Every shipped prose file in this kit is rewritten to use plain punctuation instead of em dashes.
 
 ## 2.3.2 (2026-08-21)
 
@@ -29,24 +22,19 @@
 - **`/pickup` also gained the read discipline `/resume` never had.** It now reads an append-only decision log by its tail rather than whole. A plain read returns the TOP of a file, so "the last 5 entries" silently became the OLDEST five on any project with a long log, and the session carried on believing it held current context. That failure is silent, which is what made it worth a step of its own.
 - Upgrading from 2.2.x: run `/pickup` where you used to run `/resume`. Nothing else changes.
 
-## 2.2.3 (2026-08-19)
+## 2.2.3 (2026-08-21)
 
-- The license said "DRAFT, have an attorney review before first distribution" and was titled "Shiproom Kit License", a product name retired two releases ago. The draft marker was an internal note that shipped by mistake. It now carries the same honest line the paid bundle has carried since 3.2.2: this license has not yet had attorney review, and it will be updated through the free updates channel when it has. No right, restriction, or permission changed.
-- The MIT attribution clause pointed at `kit/.claude/skills/`, a path that does not exist in this repository. It now points at `kit-payload/team/skills/`, where the third-party notices actually live. That clause is how anyone finds the MIT notices, so a dead pointer there mattered more than a broken link usually does.
-- No change to any agent, command, rule, or skill.
-
-## 2.2.2 (2026-08-18)
-
-- The plugin description no longer counts its own parts. It used to say "12 agents, 8 commands, 10 rules, 4 skills", which is true today and has been wrong before: a stale count string sat live in public for six days earlier this month, and counts move on almost every release. The description now says what the kit does (an orchestrator that plans and routes, a fresh-context verifier that checks work before it ships, project memory that survives across sessions) and leaves the arithmetic to the repo.
-- The marketplace entry gained a category (productivity) and a homepage, and the plugin manifest gained a license line pointing at LICENSE.md. These are the fields a directory listing reads.
-- No change to any agent, command, rule, or skill. Installing this over 2.2.1 changes metadata only.
+- The license no longer calls itself a draft. It had carried "**DRAFT: have an attorney review before first distribution**" since before the kit was first published, which was an internal note that shipped by mistake and was a false statement about a product already distributed hundreds of times. It now says the same honest thing the paid bundle has said since 3.2.2: this license has not yet had attorney review, and it will be updated through the free updates channel when it has. **No right, restriction, or permission changed.**
+- The license title dropped the retired product name.
+- No change to any agent, command, rule, or skill. The MIT attribution clause still points at `kit/.claude/skills/`, which is where the third-party notices actually live in this download.
+- Version numbering note: this release jumps 2.2.1 → 2.2.3 so the zip and the plugin report the same number. There was no 2.2.2 for the zip. That release changed plugin and marketplace metadata only, none of which ships in this archive.
 
 ## 2.2.1 (2026-08-18)
 
 - `escalation.md` describes the paid bundle's enforcement layer accurately. It had said the layer is "off unless you turn it on", which is wrong for a fresh install: the installer recommends it and turns it on when you state no preference. Only a setup you already run is strictly off-unless-yes. The same sentence also left out that the layer guards the files it lives in, not just outward shell commands.
-- The payload version stamp said 2.1.1 while the plugin said 2.2.0. Both now read 2.2.1.
+- Why it changed: the sentence is the kit's one description of what the paid tier adds, and it was overstating how cautious the installer is. Prose only, no behavior change.
 
-## 2.2.0 (2026-08-18)
+## 2.2.0
 
 - `escalation.md` now says plainly what the rule is and is not: the team is instructed to stop before anything outward, a model follows that instruction, and nothing in the kit technically blocks the action. Same policy as before, described accurately.
 - The council advisors and the verifier can no longer write files, and the runner can no longer reach the network. A review agent that could quietly edit the thing it was reviewing was never an independent review.
@@ -62,18 +50,17 @@
 - Item counts are now 12 agents, 8 commands, 10 rules, 4 skills.
 
 ## 2.0.1 (2026-08-13)
-- `/backbrief-kit:setup` (and the installed `/setup`) now close with one optional line: a plugin install never asks for an email, so the kit has no way to tell you when a new version ships. If you want update notices, the form at backbrief.ai/get-the-kit is the update list. Said once, and a no is a no.
-- Fixed a stale product-name reference in this plugin's setup instructions: an upgrade-detection line said "Backbrief Kit" where it meant the older "Shiproom Kit" heading.
-- Item counts unchanged: 12 agents, 7 commands, 10 rules, 4 skills.
+- /setup now closes with one optional line: an installed kit cannot announce new versions, so if you want an email when a meaningful update ships, the form at backbrief.ai/get-the-kit is the update list. Said once, a no is a no, and it is never repeated. If you skip /setup, the first-run greeting makes the same offer instead.
+- Nothing else changed. Item counts stay 12 agents, 7 commands, 10 rules, 4 skills.
 
-## 2.0.0 (2026-08-10) — the rename release
-
-- The kit is renamed: the Shiproom Kit is now the **Backbrief Kit**, this plugin is now **backbrief-kit** in the **backbrief** marketplace, and the site moved to backbrief.ai (shiproom.ai redirects there). Same files, same system, new name; item counts unchanged (12 agents, 7 commands, 10 rules, 4 skills).
-- New installs: `/plugin marketplace add charlesashe/backbrief-kit`, then `/plugin install backbrief-kit@backbrief`, then `/backbrief-kit:setup`. The old `charlesashe/shiproom-kit` marketplace address still resolves (GitHub redirects it here).
-- **Already installed as shiproom-kit@shiproom?** Your installed kit keeps working. To move to the new plugin name: `/plugin uninstall shiproom-kit` (this does not touch the kit files it installed into your projects), then add and install as above. Running `/backbrief-kit:setup` afterwards upgrades your installed kit files in place — it recognizes the old Shiproom Kit stamp and never touches anything you wrote.
+## 2.0.0 (2026-08-10)
+- The kit is renamed: the Shiproom Kit is now the **Backbrief Kit** (and the paid bundle is now **Backbrief Business OS**). Same files, same system, new name; the site moved to backbrief.ai and shiproom.ai redirects there. Nothing about how the kit works changed in this release: the major version marks the rename.
+- Every download link you already have keeps working: the old shiproom.ai URLs redirect permanently to the same files on backbrief.ai.
+- Updating over an older install works exactly as before: the installer recognizes earlier "Shiproom Kit" and "Agent OS Kit" installs (stamped or not) as its own and upgrades them, never touching anything you wrote. Memory backups now go to `_backbrief-backups/`; old `_shiproom-backups/` folders are recognized during cleanup.
+- Item counts are unchanged: 12 agents, 7 commands, 10 rules, 4 skills.
 
 ## 1.5.0 (2026-08-09)
-- Your knowledgebase is now a first-class part of the kit. `/setup` asks for the documents AND the links the team should work from — digital books, guides, product docs, a docs site, a Notion page — copies the files into `context/reference/`, and records every source in a new index, `context/reference/SOURCES.md`, with a note on when to use it. Links finally have a home: they live as rows in that index.
+- Your knowledgebase is now a first-class part of the kit. `/setup` asks for the documents AND the links the team should work from (digital books, guides, product docs, a docs site, a Notion page), copies the files into `context/reference/`, and records every source in a new index, `context/reference/SOURCES.md`, with a note on when to use it. Links finally have a home: they live as rows in that index.
 - The researcher reads the index first and cites your sources, by filename or URL, ahead of general knowledge.
 - `/next` now notices an empty knowledgebase and offers once, in one line, to file whatever you have. It never nags and never blocks anything.
 - You do not have to wait for `/setup`: naming a document or link in chat is enough to have it filed and indexed.
@@ -120,9 +107,9 @@
 - /verify-install checks for the reference folder and offers to create it on older installs.
 
 ## 1.2.0 (2026-08-02)
-- New: /setup command — first-time setup interview writes the context files for you; no manual file editing.
-- New: /verify-install command — plain pass/fail install check, including the common copied-too-deep mistake.
-- New: first-run greeting — on a fresh install the team introduces itself and offers /setup.
+- New: /setup command: first-time setup interview writes the context files for you; no manual file editing.
+- New: /verify-install command: plain pass/fail install check, including the common copied-too-deep mistake.
+- New: first-run greeting: on a fresh install the team introduces itself and offers /setup.
 - New: install docs lead with the one-paste assisted install (Claude does the copying, same on Windows and Mac); manual copying is now the alternative, with a Mac hidden-folder note.
 - Also available as a Claude Code plugin: /plugin marketplace add charlesashe/shiproom-kit
 

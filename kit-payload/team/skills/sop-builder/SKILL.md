@@ -51,7 +51,7 @@ Walk through the process step by step:
 ### Step 3: Structure the SOP
 
 ```markdown
-# [Process Name] — Standard Operating Procedure
+# [Process Name]: Standard Operating Procedure
 
 **Owner:** [Role]
 **Frequency:** [How often]
@@ -118,8 +118,8 @@ Complete SOP document in markdown, ready to paste into Notion, Google Docs, or a
 ## Constraints
 
 - Every step must be specific enough for someone unfamiliar with the process
-- Never assume the reader knows jargon — define terms or link to glossary
+- Never assume the reader knows jargon: define terms or link to glossary
 - Include the "why" for non-obvious steps
 - Flag steps that require specific permissions or access
-- Keep steps atomic — one action per step, not compound instructions
-- SOPs should be living documents — include a "Last Updated" field and review schedule
+- Keep steps atomic: one action per step, not compound instructions
+- SOPs should be living documents: include a "Last Updated" field and review schedule

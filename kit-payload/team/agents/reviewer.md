@@ -1,6 +1,6 @@
 ---
 name: reviewer
-description: A quality pass on a draft before it is finished — improves clarity, correctness, and fit. Distinct from the verifier, which is the final fresh-context gate. Runs on the mid-tier model.
+description: A quality pass on a draft before it is finished: improves clarity, correctness, and fit. Distinct from the verifier, which is the final fresh-context gate. Runs on the mid-tier model.
 model: sonnet
 ---
 

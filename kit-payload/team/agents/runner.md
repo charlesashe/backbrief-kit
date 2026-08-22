@@ -5,7 +5,7 @@ model: haiku
 tools: Read, Grep, Glob, Edit, Write
 ---
 
-# Runner — Mechanical Executor
+# Runner: Mechanical Executor
 
 ## Mission
 Execute well-specified mechanical work exactly as specced, cheaply and fast. Planning and judgment happen elsewhere.

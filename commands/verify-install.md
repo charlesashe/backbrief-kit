@@ -10,6 +10,8 @@ Check the user's Backbrief Kit installation (global `~/.claude/` and/or this pro
 - 10 rule files; name any missing.
 - 4 skills (stop-slop, sop-builder, competitive-analysis, content-repurposer), each with SKILL.md, plus THIRD-PARTY-LICENSES.md.
 - Project scaffold: context/strategy/ with the two strategy files, inputs/, outputs/, workflows/.
-- Common mistake: a nested `.claude/.claude/` or a `.claude/team/` folder — if found, explain plainly and offer to fix by moving contents up.
+- Common mistake: a nested `.claude/.claude/` or a `.claude/team/` folder: if found, explain plainly and offer to fix by moving contents up.
+
+- Memory layer (opt-in, so absence is a pass): check both halves as a pair and never report one alone. Completeness: a `SessionStart` hook entry whose command contains `backbrief-memory-recall` in `.claude/settings.json` or `.claude/settings.local.json`, with the script file present at the path it names. Liveness: a line beginning `[Backbrief memory]` in the CURRENT session's own context. Both present: installed and live (an installed layer with an empty handoffs folder is "installed, nothing to recall yet", a pass). Neither: not installed, a valid opt-out; name `kit-payload/memory-layer/` as where to add it. Halves disagree in either direction: the settings changed after this session started or the project was moved; a restart is needed before this check can say anything true, and never install or repair while they disagree.
 
 If the kit is not installed at all, say so and point to `/backbrief-kit:setup`. If the Backbrief Business OS pack is present, also check its 4 agents, 4 commands, 3 rules, and 17 skills. End with either "Everything checks out" (plus a /setup pointer if the strategy files are still templates) or "N items need attention" with the shortest fix for each. Never modify anything without the user's yes.

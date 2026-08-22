@@ -25,7 +25,7 @@ If `/critique` or `/council` would genuinely help right here, mention it as opti
 
 An artifact only counts as done if it has the owner's real content in it. A template that was created and saved but never filled in does not advance the stage: treat it as still missing, say so plainly, and offer to finish it. This applies to the brief, the plan, and the scorecard, not just the strategy files.
 
-While you are reading, glance at the knowledgebase. If the project is set up but `context/reference/` holds nothing beyond the shipped templates (no files added, no real rows in `SOURCES.md` — the example rows do not count), add one line to your answer: "No knowledgebase registered yet — if you have guides, docs, or links the team should work from, name them and I will file them." Say it once, as an aside, never as a required step, and drop it entirely once the owner has sources registered or has declined in this session.
+While you are reading, glance at the knowledgebase. If the project is set up but `context/reference/` holds nothing beyond the shipped templates (no files added, no real rows in `SOURCES.md`, the example rows do not count), add one line to your answer: "No knowledgebase registered yet: if you have guides, docs, or links the team should work from, name them and I will file them." Say it once, as an aside, never as a required step, and drop it entirely once the owner has sources registered or has declined in this session.
 
 ## 3. Say where they are
 

@@ -2,7 +2,7 @@
 
 Put trusted source material for this project here: product docs, standards, style guides, market reports, past proposals, transcripts, and digital books or long-form guides you own the rights to use. Markdown and text work best; PDFs work too.
 
-Sources that live elsewhere — a docs site, a Notion page, an online guide, a video course — belong here too, as **links**. Links go in `SOURCES.md`, the index sitting next to this file: one row per source, with a note on when to use it. Files benefit from a row as well, but links require one; the index is the only place the team can find them.
+Sources that live elsewhere (a docs site, a Notion page, an online guide, a video course) belong here too, as **links**. Links go in `SOURCES.md`, the index sitting next to this file: one row per source, with a note on when to use it. Files benefit from a row as well, but links require one; the index is the only place the team can find them.
 
 Why this folder exists: agents that answer from real sources beat agents that answer from vibes. The researcher checks the index and this folder before searching anywhere else, and findings that cite a source here outrank general knowledge. More grounding, less generic filler.
 
