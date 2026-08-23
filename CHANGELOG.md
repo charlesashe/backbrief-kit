@@ -1,5 +1,10 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.4.2 (2026-08-23)
+
+- **Documentation only, no payload behavior change.** Every agent, command, rule, skill and script is byte-identical to the previous release.
+- **The README now says the paid product exists and is shipping.** A free-kit user reported believing Backbrief Business OS was still in development. There is now a short section naming it, and stating plainly that this free kit is complete and is not a trial.
+
 ## 2.4.1 (2026-08-22)
 
 - **Documentation only, no payload behavior change.** The user guide's memory-layer cost sentence now states the whole range: roughly five hundred tokens in the common case, up to about fifteen hundred when a short brief loads whole. Every agent, command, rule, script and skill is byte-identical to the previous release.

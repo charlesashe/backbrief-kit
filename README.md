@@ -29,6 +29,15 @@ Setup upgrades the kit's own files and adds what's new; it never overwrites your
 
 The same kit ships as a downloadable zip (delivered by email) at [backbrief.ai](https://backbrief.ai), identical contents, assisted one-paste install.
 
+## If you want the fuller system
+
+This kit is complete and free. It is not a trial, nothing in it expires, and nothing is held back.
+
+There is also a paid product, **Backbrief Business OS**, and it is shipping today. It contains this
+kit plus a CEO loop (a structured intake, a business plan, a graded stress-test against a published
+rubric, and a recorded go/no-go) and an operations tier that stays locked until a plan has actually
+been approved. It is at [backbrief.ai](https://backbrief.ai).
+
 ## What's inside
 
 - `kit-payload/team/`: the installable `.claude/` payload: agents, commands, rules, skills, root CLAUDE.md
