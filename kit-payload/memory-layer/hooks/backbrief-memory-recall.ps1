@@ -76,7 +76,7 @@ try {
 
     $decisionsBlock = ''
     if (Test-Path -LiteralPath $decisionsFile -PathType Leaf) {
-        $headings = Get-Content -LiteralPath $decisionsFile -ErrorAction Stop | Where-Object { $_ -match '^## ' }
+        $headings = Get-Content -LiteralPath $decisionsFile -ErrorAction Stop | Where-Object { $_ -match '^(## |- \d{4}-\d{2}-\d{2})' }
         if ($headings.Count -gt 0) {
             $tail = $headings | Select-Object -Last 5
             $decisionsBlock = "`n`nLast 5 decision-log entries:`n$($tail -join "`n")"

@@ -1,5 +1,11 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.4.3 (2026-08-23)
+
+- **The memory layer's decision-log tail was silently absent on any project using the shipped starter decision log.** The hook matched entries with `grep '^## '`, while the scaffold's own starter `decisions.md` uses `- YYYY-MM-DD:` bullets and neither the decision-log rule nor `/handoff` prescribes headings. So half of what this layer advertises printed nothing, on exactly the projects that followed the shipped files most closely, and it failed by returning a plausible partial answer rather than an error. Both hook variants now match either format.
+
+- **Documentation only.** The memory layer's cost figure is restated as a measured range instead of a single number, and the three places that carried it no longer disagree. Measured across sixty one real handoff briefs: the digest path runs roughly three hundred fifty to five hundred tokens with a median near four hundred twenty, the decision-log tail is already inside that figure rather than added to it, and the numbers come from a public tokenizer so they are approximate.
+
 ## 2.4.2 (2026-08-23)
 
 - **Documentation only, no payload behavior change.** Every agent, command, rule, skill and script is byte-identical to the previous release.

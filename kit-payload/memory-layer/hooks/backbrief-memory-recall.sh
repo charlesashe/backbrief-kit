@@ -63,7 +63,7 @@ fi
 
 DECISIONS_BLOCK=""
 if [ -f "$DECISIONS_FILE" ]; then
-    DTAIL=$(grep '^## ' "$DECISIONS_FILE" 2>/dev/null | tail -n 5)
+    DTAIL=$(grep -E '^(## |- [0-9]{4}-[0-9]{2}-[0-9]{2})' "$DECISIONS_FILE" 2>/dev/null | tail -n 5)
     if [ -n "$DTAIL" ]; then
         DECISIONS_BLOCK="
 

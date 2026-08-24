@@ -27,17 +27,25 @@ on a repeat.
 
 ## What it costs
 
-Measured against real handoff briefs: the digest form costs roughly four hundred tokens
-of context, and a brief injected whole (which only happens under the 4,000-byte threshold
-this layer uses as its cutoff) costs more, up to somewhere under fifteen hundred tokens at
-the threshold itself. Past the threshold the hook always switches to the digest, the
-brief's title line and its "Next action" section only, plus a note pointing at the full
-file. A brand-new project with no handoff briefs yet costs nothing at all: the hook has
-nothing to recall and prints nothing.
+Measured against sixty one real handoff briefs from one working project: the digest form,
+which covered fifty nine of them, costs roughly three hundred fifty to five hundred tokens
+of context, with a median near four hundred twenty. That range already includes the last
+five decision-log headings the hook appends to every injection, which account for about two
+hundred twenty five tokens on their own and grow as a decision log accumulates longer
+headings.
 
-These are measured numbers from real briefs, not a hard cap. A longer brief under the byte
-threshold costs more; the threshold exists specifically to stop that from growing without
-bound.
+A brief injected whole (which only happens under the 4,000-byte threshold this layer uses
+as its cutoff) costs more: about nine hundred tokens in that sample, and an estimated
+thirteen hundred for a brief sitting right at the threshold. Past the threshold the hook
+always switches to the digest, the brief's title line and its "Next action" section only,
+plus a note pointing at the full file. A brand-new project with no handoff briefs yet costs
+nothing at all: the hook has nothing to recall and prints nothing.
+
+These are measured numbers from real briefs, not a hard cap, and they were counted with a
+public tokenizer rather than Claude's own, so read them as approximate. The digest has no
+internal length cap of its own: a brief whose "Next action" section runs long produces a
+correspondingly long digest, and the largest in that sample passed a thousand tokens. The
+4,000-byte threshold bounds the whole-file path, not the digest.
 
 ## Boundaries
 
