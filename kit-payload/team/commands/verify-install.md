@@ -15,6 +15,7 @@ Start by reporting the installed version from `.claude/VERSION` (for example "Ba
    - Name collisions with Claude Code's built-ins: a built-in lives in neither `~/.claude/commands/` nor `~/.claude/skills/`, so it is invisible to a folder comparison. If a shipped name ever matches one, typing it silently reaches the built-in instead. Type `/` in an interactive session to see the current built-in names.
    - `.claude/rules/`: expect 10 rule files; name any missing.
    - `.claude/skills/`: expect stop-slop, sop-builder, competitive-analysis, content-repurposer, each with a SKILL.md, plus THIRD-PARTY-LICENSES.md.
+   - Parse every SKILL.md's YAML frontmatter (the block between the opening `---` pair). A frontmatter block that fails to parse, or that lacks a `description:` field, means Claude Code cannot auto-discover that skill - it fails silently, with the folder sitting there looking installed. Name each such file as a FAIL, not a note.
    - Root `CLAUDE.md` present (global `~/.claude/` install or this project).
    - Project folders: `context/strategy/` (with the two strategy files), `context/reference/`, `inputs/`, `outputs/`, `workflows/`. A missing `context/reference/` is a soft fail on installs from before 1.3.0: offer to create it.
    - `.claude/memory/decisions.md` present in the project (the decision log the decision-log rule writes to). If missing, offer to create it from the scaffold.

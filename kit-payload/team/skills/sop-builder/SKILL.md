@@ -1,5 +1,6 @@
 ---
 name: sop-builder
+description: "Turn repeatable work into standard operating procedures: checklists, steps, owners, and handoff docs. Use when a process lives in someone's head and needs writing down."
 version: 1.0.0
 category: Operations & Systems
 domain: standard-operating-procedures

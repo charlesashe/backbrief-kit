@@ -1,6 +1,6 @@
 # Skill Routing (Backbrief kit)
 
-The kit ships four bundled skills in `.claude/skills/`. Claude Code discovers them automatically: no install step. Agents load the matching skill before producing work in its domain.
+The kit's bundled skills live in `.claude/skills/`. Claude Code discovers them automatically: no install step. Agents load the matching skill before producing work in its domain.
 
 | Skill | Primary agent | When |
 |---|---|---|

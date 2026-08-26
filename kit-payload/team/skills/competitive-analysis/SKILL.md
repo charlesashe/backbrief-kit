@@ -1,5 +1,6 @@
 ---
 name: competitive-analysis
+description: "Map competitors, compare offers, and find positioning gaps. Use for competitor research, alternatives pages, or market positioning work. Date-stamp claims and mark anything unverified; competitor facts age fast."
 version: 1.0.0
 category: Product & Strategy
 domain: competitive-analysis

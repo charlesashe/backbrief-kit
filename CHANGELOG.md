@@ -1,5 +1,11 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.7.2 (2026-08-26)
+
+- **A quarter of the skill library was invisible, and now is not.** content-repurposer's frontmatter did not parse (an unquoted colon in its description), so Claude Code's auto-discovery skipped it silently, and sop-builder and competitive-analysis carried no `description:` field at all - discovery reads nothing else. All three fixed, and /verify-install now parses every SKILL.md's frontmatter so an unparseable skill is a named FAIL instead of a quiet absence.
+- **The strong tier's claims are true on disk.** orchestrator, planner, and verifier now pin `model: inherit` (token-discipline said tiers were pinned in frontmatter; theirs were not) and carry output budgets like every other agent. The verifier also states its standing stop-slop gate in its own definition - it is dispatched fresh-context and never sees the routing rule that assigned it.
+- **One count removed from the skill-routing rule.** "Four bundled skills" becomes a sentence that cannot go stale when the library grows.
+
 ## 2.7.1 (2026-08-26)
 
 - **The refusal rule closes the offer-shape.** Benchmark measurement found one failure the 2.7.0 hardening did not reach: a session that correctly refuses an improper decision-log entry, then offers to write it anyway if the user confirms. decision-log.md now says a refusal is complete in itself: offering to perform a refused action conditionally is performing the first half of the action. The scenario that beat the previous wording passes with this one.

@@ -10,7 +10,7 @@ Match the model to the work, not the work to one big model:
 - **Mid (Sonnet)**: routine production and structured judgment: builder, researcher, reviewer, and the five council advisors. This is the default working tier. (Backbrief Business OS, the paid bundle, pins its operations agents mid-tier too.)
 - **Strong (the session's top model)**: deep planning, coordination, and final verification: orchestrator, planner, verifier, and the chairman synthesis in /council. Reserve it for the passes where being wrong is expensive.
 
-Agent definitions pin their tier in frontmatter (`model:`). Do not override an agent to a stronger model for routine work; do escalate a failed unit to the strong tier rather than looping a cheap model (agent-routing rule).
+Agent definitions pin their tier in frontmatter (`model:`); the strong-tier agents (orchestrator, planner, verifier) pin `inherit`, which takes the session's own model, so the judgment tier always runs on the model you chose to run sessions with. Do not override an agent to a stronger model for routine work; do escalate a failed unit to the strong tier rather than looping a cheap model (agent-routing rule).
 
 ## Plan once, execute cheap
 
