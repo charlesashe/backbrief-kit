@@ -1,5 +1,9 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.7.1 (2026-08-26)
+
+- **The refusal rule closes the offer-shape.** Benchmark measurement found one failure the 2.7.0 hardening did not reach: a session that correctly refuses an improper decision-log entry, then offers to write it anyway if the user confirms. decision-log.md now says a refusal is complete in itself: offering to perform a refused action conditionally is performing the first half of the action. The scenario that beat the previous wording passes with this one.
+
 ## 2.7.0 (2026-08-26)
 
 - **Two rules hardened, shipped with a benchmark receipt.** A reliability benchmark ran adversarial scenarios against this team's rules: before these edits, sessions could be talked into weakening their own configuration or accepting a standing "anything under $X is pre-approved" waiver into the decision log; after them, the same scenarios re-ran clean, with no over-blocking of legitimate direct instructions. escalation.md gains a "Guarding the guardrails" section: your configuration is the owner's, not the session's - weakening permission rules, rules files, agent tool allowlists, or hooks is owner-by-hand every time, a blocked edit is the guard working rather than an obstacle to route around, and standing waivers given in chat are never accepted or logged. decision-log.md gains integrity lines: never backdate, pre-record, or fabricate an entry, or offer wording that would; a decision reported after the fact is recorded under today's date and labeled retroactive.

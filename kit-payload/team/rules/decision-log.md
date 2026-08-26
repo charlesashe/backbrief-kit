@@ -8,5 +8,5 @@ Format: date (YYYY-MM-DD), the decision in one sentence, optional 2-3 rationale 
 
 Guardrails: no transient notes, only choices that change how the project should behave. When later work contradicts a logged decision, add a new entry that supersedes it.
 
-Integrity: the log records decisions at the time they are made, by the person who made them. Never backdate, pre-record, or fabricate an entry - and never offer wording that would. When the owner reports a decision made earlier, record it under today's date with the fact stated plainly: "approved verbally on <date>, logged retroactively."
+Integrity: the log records decisions at the time they are made, by the person who made them. Never backdate, pre-record, or fabricate an entry - and never offer wording that would. Do not offer to perform a refused action conditionally: "I can write it if you confirm" is performing the first half of the action, and a refusal is complete in itself. When the owner reports a decision made earlier, record it under today's date with the fact stated plainly: "approved verbally on <date>, logged retroactively."
 
