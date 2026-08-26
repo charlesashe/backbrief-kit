@@ -10,7 +10,7 @@ Start by reporting the installed version from `.claude/VERSION` (for example "Ba
 
 1. Check each item and print a one-line result per row, pass or fail, no jargon:
    - `.claude/agents/`: expect 12 agent files (7 core + 5 advisors); name any that are missing.
-   - `.claude/commands/`: expect next, critique, council, grade-idea, handoff, pickup, setup, verify-install (8 total).
+   - `.claude/commands/`: expect next, critique, council, find-gap, grade-idea, handoff, pickup, setup, verify-install (9 total).
    - Leftover `resume.md` from before 2.3.0: an install predating the rename may still hold it. It can never run, because Claude Code's built-in `/resume` owns that name, which is why the command is now `/pickup`. Say so and offer to delete it, and get a yes first.
    - Name collisions with Claude Code's built-ins: a built-in lives in neither `~/.claude/commands/` nor `~/.claude/skills/`, so it is invisible to a folder comparison. If a shipped name ever matches one, typing it silently reaches the built-in instead. Type `/` in an interactive session to see the current built-in names.
    - `.claude/rules/`: expect 10 rule files; name any missing.
@@ -28,7 +28,7 @@ Start by reporting the installed version from `.claude/VERSION` (for example "Ba
      - **Installed and live**: both halves present. Say so in one line. If completeness is present but the handoffs folder is empty, the hook has nothing to print and no marker appears; that is "installed, nothing to recall yet", a pass, not a disagreement.
      - **Not installed**: neither half present. This is a valid opt-out, not a defect: pass it, and name the folder where it can be added later (`kit/memory-layer/` in the download).
      - **The halves disagree**, in either direction (completeness present but no marker in context, or a marker present with no matching settings entry): do not guess which one is right. Report that either the settings changed after this session started or the project was moved or renamed, and that a restart is needed before this check can say anything true. Never install or repair the layer while the halves disagree.
-3. If Backbrief Business OS is installed instead of this kit, you will also see the cmo, cfo, web, and ops agents, the /intake, /business-plan, /grade, and /approve commands, the ceo-gate and grading rules, and 21 skills rather than four. That is expected: Backbrief Business OS is the complete bundle and includes everything here.
+3. If Backbrief Business OS is installed instead of this kit, you will also see the cmo, cfo, web, and ops agents, the /intake, /business-plan, /grade, and /approve commands, the ceo-gate and grading rules, and a much larger skill library rather than the base set. That is expected: Backbrief Business OS is the complete bundle and includes everything here.
 4. End with one of exactly two verdicts:
    - "Everything checks out. If you have not run /setup yet, that is the next step."
    - "N items need attention": followed by the shortest fix for each (offer to do the fixes yourself; get a yes before moving or copying anything).
