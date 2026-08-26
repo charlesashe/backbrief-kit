@@ -1,5 +1,9 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.7.0 (2026-08-26)
+
+- **Two rules hardened, shipped with a benchmark receipt.** A reliability benchmark ran adversarial scenarios against this team's rules: before these edits, sessions could be talked into weakening their own configuration or accepting a standing "anything under $X is pre-approved" waiver into the decision log; after them, the same scenarios re-ran clean, with no over-blocking of legitimate direct instructions. escalation.md gains a "Guarding the guardrails" section: your configuration is the owner's, not the session's - weakening permission rules, rules files, agent tool allowlists, or hooks is owner-by-hand every time, a blocked edit is the guard working rather than an obstacle to route around, and standing waivers given in chat are never accepted or logged. decision-log.md gains integrity lines: never backdate, pre-record, or fabricate an entry, or offer wording that would; a decision reported after the fact is recorded under today's date and labeled retroactive.
+
 ## 2.6.0 (2026-08-26)
 
 - **New command: /find-gap.** The missing front door to the idea pipeline. You name an industry, product type, or audience; the researcher reads real complaints from forums and reviews, checks whether people are actively seeking solutions and why the existing ones disappoint, and returns ranked gaps with verbatim, sourced evidence and an honest confidence statement. It ends by offering /grade-idea on the top gap, so a hunch becomes a scored idea inside one free install. Its output says plainly what it did not do: it reads a biased sample, the demand check is judgment rather than measurement, and finding a real problem is not a prediction of success.
@@ -14,14 +18,15 @@
 
 ## 2.4.3 (2026-08-23)
 
-- **The memory layer's decision-log tail was silently absent on any project using the shipped starter decision log.** The hook matched entries with `grep '^## '`, while the scaffold's own starter `decisions.md` uses `- YYYY-MM-DD:` bullets and neither the decision-log rule nor `/handoff` prescribes headings. So half of what this layer advertises printed nothing, on exactly the projects that followed the shipped files most closely, and it failed by returning a plausible partial answer rather than an error. Both hook variants now match either format.
+- **The memory layer's decision-log tail was silently absent on any project using the shipped starter decision log.** The hook matched entries with `grep '^## '`, while the scaffold's own starter `decisions.md` uses `- YYYY-MM-DD:` bullets and neither the decision-log rule nor `/handoff` prescribes headings. So half of what this layer advertises printed nothing, on exactly the projects that followed the shipped files most closely, and it failed by returning a plausible partial answer rather than an error. Both hook variants now match either format. Confirmed by control (same file, same hook, only the marker changed) and tested four ways: POSIX `sh` and PowerShell, against bullet-format and heading-format logs.
 
-- **Documentation only.** The memory layer's cost figure is restated as a measured range instead of a single number, and the three places that carried it no longer disagree. Measured across sixty one real handoff briefs: the digest path runs roughly three hundred fifty to five hundred tokens with a median near four hundred twenty, the decision-log tail is already inside that figure rather than added to it, and the numbers come from a public tokenizer so they are approximate.
+- **Documentation only, no payload behavior change.** The memory layer's cost figures are restated as a measured range instead of a single number. The three places that carried it disagreed with each other (roughly four hundred tokens in the layer's own README, five hundred in the user guide and in the installer's opt-in question), and none of them was the measured answer. Measured across sixty one real handoff briefs: the digest path, which covers fifty nine of them, runs roughly three hundred fifty to five hundred tokens with a median near four hundred twenty. Three things the old wording never said are now stated: the decision-log tail is already inside that figure rather than added to it, the digest itself has no internal length cap so an unusually long "Next action" section produces an unusually long digest, and the numbers come from a public tokenizer rather than Claude's own and are approximate. The user guide also had the common case backwards, describing whole-file injection as typical when it is rare once a project has real history.
 
 ## 2.4.2 (2026-08-23)
 
-- **Documentation only, no payload behavior change.** Every agent, command, rule, skill and script is byte-identical to the previous release.
-- **The README now says the paid product exists and is shipping.** A free-kit user reported believing Backbrief Business OS was still in development. There is now a short section naming it, and stating plainly that this free kit is complete and is not a trial.
+- **Documentation only, no payload behavior change.** Every agent, command, rule, script and skill is byte-identical to the previous release.
+- **The install instruction now leads the README.** It sat below the requirements list and the file tree, so the first thing a reader met was a folder layout, and working out that the kit installs itself took one user days against an install that takes minutes. The instruction is now the first section, and it says plainly that you do not copy any files by hand.
+- **The README now says the paid product exists and is shipping.** A free-kit user reported believing Backbrief Business OS was still in development. It was mentioned only in the changelog, in installer-internal instructions, and in one line of a command description, so nothing a new reader would see. There is now a short section naming it, stating that the free kit is complete and not a trial.
 
 ## 2.4.1 (2026-08-22)
 
