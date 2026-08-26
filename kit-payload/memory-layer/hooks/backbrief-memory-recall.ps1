@@ -76,6 +76,10 @@ try {
 
     $decisionsBlock = ''
     if (Test-Path -LiteralPath $decisionsFile -PathType Leaf) {
+        # Matches BOTH shipped decision-log formats: the '## ' heading style and the
+        # '- YYYY-MM-DD:' bullet style the scaffold's starter file uses. Requiring a
+        # date on the bullet form keeps ordinary list items out. Sub-bullets are
+        # indented, so an entry's rationale lines cannot match either branch.
         $headings = Get-Content -LiteralPath $decisionsFile -ErrorAction Stop | Where-Object { $_ -match '^(## |- \d{4}-\d{2}-\d{2})' }
         if ($headings.Count -gt 0) {
             $tail = $headings | Select-Object -Last 5

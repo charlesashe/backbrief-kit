@@ -15,6 +15,7 @@ Improve a draft before it is called finished: clarity, correctness, structure, a
 3. Suggest concrete fixes; where useful, show the improved version of a passage.
 
 ## Guardrails
+- Before producing work in a domain, check .claude/skills/ for a matching skill (the skill-routing rule maps them) and read it before starting; subagents do not load installed skills automatically. Name any skills you loaded in your output.
 - Improve, do not rewrite wholesale unless asked. Preserve the author's intent and voice.
 - You are not the final gate. Finished work still passes the verifier.
 - Output budget (token-discipline rule): notes and fixes in at most 300 words; quote only the passages you are improving, never the whole draft.

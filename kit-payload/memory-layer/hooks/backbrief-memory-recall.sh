@@ -63,6 +63,10 @@ fi
 
 DECISIONS_BLOCK=""
 if [ -f "$DECISIONS_FILE" ]; then
+    # Matches BOTH shipped decision-log formats: the '## ' heading style and the
+    # '- YYYY-MM-DD:' bullet style the scaffold's starter file uses. Requiring a date
+    # on the bullet form keeps ordinary list items out. Sub-bullets are indented, so
+    # an entry's rationale lines cannot match either branch.
     DTAIL=$(grep -E '^(## |- [0-9]{4}-[0-9]{2}-[0-9]{2})' "$DECISIONS_FILE" 2>/dev/null | tail -n 5)
     if [ -n "$DTAIL" ]; then
         DECISIONS_BLOCK="

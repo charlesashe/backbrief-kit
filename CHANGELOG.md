@@ -1,5 +1,11 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.5.0 (2026-08-26)
+
+- **The orchestrator never told anyone to use a skill.** The kit ships bundled skills and a rule mapping them to agents, and the coordinator that decides how work gets done contained zero references to any of it - so specialists were dispatched unequipped, and a domain no specialist covered quietly became the orchestrator's own work. Found from an owner's real session where a full day of production ran almost entirely inline. The Method grows from 5 steps to 9: name the expertise a unit needs before choosing who runs it; equip every dispatch with the matching skills by full path (subagents do not load installed skills automatically); when no specialist and no skill covers a domain, constitute an expert under an explicit brief rather than approximating; and doing a unit yourself is a routing decision that needs a reason. One new guardrail: a run that produced good work without routing any of it is a failed orchestration, however good the output.
+
+- **The worker agents now check for a matching skill before starting.** builder, researcher, reviewer, and planner each gained a first guardrail: check `.claude/skills/` for a matching skill before producing work in a domain, and name any skills loaded in the output. The runner (its unit names its skill), the five advisors (deliberately lean per the grading rule), and the verifier (fresh-context by design) are unchanged on purpose.
+
 ## 2.4.3 (2026-08-23)
 
 - **The memory layer's decision-log tail was silently absent on any project using the shipped starter decision log.** The hook matched entries with `grep '^## '`, while the scaffold's own starter `decisions.md` uses `- YYYY-MM-DD:` bullets and neither the decision-log rule nor `/handoff` prescribes headings. So half of what this layer advertises printed nothing, on exactly the projects that followed the shipped files most closely, and it failed by returning a plausible partial answer rather than an error. Both hook variants now match either format.
