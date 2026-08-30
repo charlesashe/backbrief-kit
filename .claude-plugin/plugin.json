@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "backbrief-kit",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "Run a Claude Code project like a team instead of one long chat. An orchestrator plans the work and routes it to specialist agents, a fresh-context verifier checks finished artifacts before they ship, and project memory carries state across sessions with /handoff and /pickup. Install, then run /backbrief-kit:setup for a guided setup.",
   "author": {
     "name": "Charles Ashe",

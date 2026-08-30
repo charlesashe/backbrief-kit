@@ -1,5 +1,13 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.9.1 (2026-08-30)
+
+Closes the residuals from the independent re-walk of 2.9.0 as shipped.
+
+- **The reference manifest moved inside the payload folder, so every install path lands it - not just the agent-run one.** 2.9.0 shipped it beside the payload with a special-case copy instruction, which the README's manual copy blocks and the merge path never execute. It now lives in `kit/.claude/`, so all three paths inherit it automatically; the installed location (`.claude/reference-manifest.json`) is unchanged.
+- **The collision check is scoped and sees nested commands.** The installer's new collision step now states it is a per-project-install check (on a global install it would compare the folder against itself), and the comparison includes command files in subfolders, which claim their bare names exactly like top-level ones - in the installer and in /verify-install both.
+- **/verify-install knows about the plugin channel.** The kit installed as a plugin carries its own copy and version under `~/.claude/plugins/`; the version row now notes it when present, instead of the split report silently covering only the two folder levels.
+
 ## 2.9.0 (2026-08-30)
 
 Findings from an independent deep review, every one re-verified on disk before it was fixed.
