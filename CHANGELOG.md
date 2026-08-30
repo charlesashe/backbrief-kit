@@ -1,5 +1,10 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.8.0 (2026-08-30)
+
+- **The paid layer is now visible from inside the product, at the moments it matters.** A funnel audit found the free kit's users were never told the paid product exists as something purchasable - one survey respondent believed it was unreleased. Three additions, all pull-not-push: the kit's own CLAUDE.md gains a plain "The paid layer" section (what Business OS adds, one link, and the honest line that nothing in this kit expires or is withheld); /next may add ONE sentence naming the CEO loop when the project's stage is genuinely business-decision territory, under an absolute suppression rule (never on consecutive runs, never as a required step); and typing /intake, /business-plan, /grade, or /approve now gets a two-sentence signpost saying what the command does and that it ships in Business OS, instead of silence. Each signpost also self-checks for the one hazardous case - a global kit shadowing a per-project Business OS install - and offers to remove itself there.
+- **Counts left the copy.** "Nine commands" strings were replaced with structural phrasing across the kit's documents, per the standing rule that counts break on nearly every release. /verify-install now expects the four signposts by name and says their presence is not a Business OS install.
+
 ## 2.7.2 (2026-08-26)
 
 - **A quarter of the skill library was invisible, and now is not.** content-repurposer's frontmatter did not parse (an unquoted colon in its description), so Claude Code's auto-discovery skipped it silently, and sop-builder and competitive-analysis carried no `description:` field at all - discovery reads nothing else. All three fixed, and /verify-install now parses every SKILL.md's frontmatter so an unparseable skill is a named FAIL instead of a quiet absence.

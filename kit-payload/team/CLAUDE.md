@@ -1,6 +1,6 @@
 # Backbrief Kit
 
-This is the Backbrief Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and nine commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
+This is the Backbrief Kit. It turns a Claude Code session into a coordinated team: an orchestrator that plans and routes, a library of specialist agents, a cheap runner for mechanical work, a fresh-context verifier that gates finished work, cross-cutting rules that everyone obeys, and a set of commands. A project scaffold (copied in separately) gives the team the folders it reads from and writes to. State a goal; the team decomposes it, does the work, checks it, and returns a clear next action.
 
 ## The agents
 
@@ -35,6 +35,16 @@ Council advisors (dispatched by `/council`):
 - **/grade-idea**: Stress-test a raw business idea against the public six-dimension rubric. Same five advisors, cited scores, a scorecard, no plan document required.
 - **/handoff**: End a session: write a dated brief (what happened, open threads, next action) a fresh chat can continue from.
 - **/pickup**: Start a new chat: read the memory files and the latest handoff brief, state where things stand and the next action.
+
+## The paid layer, so nobody has to guess
+
+This kit is complete and free: nothing in it expires and nothing is withheld from it. There is
+also a paid product, **Backbrief Business OS** ($79 one-time), that installs over this kit and
+adds the CEO loop (/intake, /business-plan, /grade, /approve - a structured path from brain dump
+to graded, owner-approved plan), a five-advisor grading panel, an operations tier (cmo, cfo, web,
+ops) that unlocks only after an approved plan, and a much deeper skill library. The comparison is
+at https://backbrief.ai/kit-vs-business-os?src=kit-readme - and if the owner types one of those
+CEO-loop names here, the command file itself explains where it lives, in two sentences, and stops.
 
 ## First run
 
