@@ -1,5 +1,11 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.8.1 (2026-08-30)
+
+- **The reviewer now runs the standing stop-slop gate by name.** The routing rule has always said the gate runs at reviewer AND verifier; only the verifier's file said so. The reviewer's definition now loads it explicitly for prose artifacts and says the pass ran.
+- **The installer stops treating your global CLAUDE.md as ours.** On a global upgrade, `~/.claude/CLAUDE.md` is now replaced only when its first heading is one of this kit's own; anything else is recognized as your configuration, left alone, and offered the pointer block as an append instead. This matches the paid bundle's long-standing behavior.
+- **Two stale strings fixed:** the third-party licenses file was still titled for the retired Shiproom name, and CUSTOMIZATION.md told customizers strong-tier agents "carry no model: line" when they actually pin `model: inherit` - following the old instruction literally would have produced a different frontmatter shape than the kit's own agents use.
+
 ## 2.8.0 (2026-08-30)
 
 - **The paid layer is now visible from inside the product, at the moments it matters.** A funnel audit found the free kit's users were never told the paid product exists as something purchasable - one survey respondent believed it was unreleased. Three additions, all pull-not-push: the kit's own CLAUDE.md gains a plain "The paid layer" section (what Business OS adds, one link, and the honest line that nothing in this kit expires or is withheld); /next may add ONE sentence naming the CEO loop when the project's stage is genuinely business-decision territory, under an absolute suppression rule (never on consecutive runs, never as a required step); and typing /intake, /business-plan, /grade, or /approve now gets a two-sentence signpost saying what the command does and that it ships in Business OS, instead of silence. Each signpost also self-checks for the one hazardous case - a global kit shadowing a per-project Business OS install - and offers to remove itself there.

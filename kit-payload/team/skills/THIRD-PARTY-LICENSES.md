@@ -1,4 +1,4 @@
-# Third-Party Licenses: Shiproom Kit Skills
+# Third-Party Licenses: Backbrief Kit Skills
 
 The four skills in this directory are third-party work redistributed under the MIT License. Each skill folder retains its upstream LICENSE file; keep those files when copying the kit. Versions pinned at vendor time (2026-08-01).
 
