@@ -1,5 +1,13 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.9.0 (2026-08-30)
+
+Findings from an independent deep review, every one re-verified on disk before it was fixed.
+
+- **The kit now ships a reference manifest, and three checks that did not exist before hang off it.** `kit/reference-manifest.json` carries the shipped-name rosters, and the installer copies it to `.claude/reference-manifest.json` beside `VERSION`. With it: the installer gains the collision check the paid bundle has had for a while (a same-named command or skill in `~/.claude/` silently overrides the one just installed - now every hit is reported, naming the file that wins), /verify-install reads its rosters from the manifest instead of typed lists that go stale, and both report the common older-global-copy case plainly.
+- **Upgrades stop silently deleting the customization our own guide directs.** CUSTOMIZATION.md tells owners to reference their custom agents in the routing rule; the upgrade path then overwrote `rules/` wholesale, so the custom agent survived while the wiring that routed to it vanished, with nothing erroring. The installer now asks before replacing `rules/`, naming `agent-routing.md` specifically, and merges an edited copy forward instead of discarding it.
+- **Dead frontmatter keys removed and a stale build artifact deleted.** Two skills carried a `tools: []` key the runtime ignores (skills restrict tools with `allowed-tools`), and two agent definitions (reviewer, runner) had frontmatter that did not parse as YAML - unquoted colons in their descriptions. All fixed. A six-week-old build zip from before the product's rename was found sitting inside the download and is gone; the release gate now refuses to ship build output inside the payload.
+
 ## 2.8.1 (2026-08-30)
 
 - **The reviewer now runs the standing stop-slop gate by name.** The routing rule has always said the gate runs at reviewer AND verifier; only the verifier's file said so. The reviewer's definition now loads it explicitly for prose artifacts and says the pass ran.

@@ -17,7 +17,6 @@ activation_triggers:
   - "how do we compare"
   - "competitor teardown"
   - "competitive landscape"
-tools: []
 ---
 
 # Competitive Analysis

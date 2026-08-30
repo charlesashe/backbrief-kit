@@ -4,7 +4,7 @@ This is the Backbrief Kit. It turns a Claude Code session into a coordinated tea
 
 ## The agents
 
-Seven core agents do the work, and five advisors power the `/council` command.
+Two tiers: the core agents do the work, and the advisors power the `/council` command.
 
 Core:
 
@@ -56,31 +56,13 @@ If the owner declines the setup offer, one sentence before moving on: the instal
 
 ## The skills
 
-Four bundled skills live in `.claude/skills/` and are discovered by Claude Code automatically: no install step. They are procedures the agents load; the agent stays accountable for the output (routing in `.claude/rules/skill-routing.md`).
-
-- **stop-slop**: removes AI writing tells from prose. A standing quality gate in the reviewer/verifier pass, not an on-request tool.
-- **sop-builder**: turns repeatable work into SOPs, checklists, and handoff docs (builder).
-- **competitive-analysis**: competitor mapping and positioning gaps (researcher).
-- **content-repurposer**: one finished piece into multiple platform formats (builder).
-
-These are third-party MIT-licensed skills bundled with attribution: see `.claude/skills/THIRD-PARTY-LICENSES.md` and keep each skill folder's LICENSE file when copying the kit.
+The bundled skills live in `.claude/skills/` and are discovered by Claude Code automatically: no install step. Each SKILL.md's own frontmatter description is what the runtime reads for discovery, so this index does not restate them. The routing rule (`.claude/rules/skill-routing.md`) is the authoritative map of who loads what: stop-slop (the standing prose gate at reviewer and verifier), sop-builder, competitive-analysis, and content-repurposer. They are third-party MIT-licensed skills bundled with attribution: see `.claude/skills/THIRD-PARTY-LICENSES.md` and keep each skill folder's LICENSE file when copying the kit.
 
 ## The rules (always apply)
 
-Every agent and every command obeys these rules. They live in `.claude/rules/` and apply to all work, not just the agent that happens to be running.
+Every agent and every command obeys the rules in `.claude/rules/`. Claude Code loads every rule file there at session start, so the rules themselves are already in context and this index does not restate them; open the folder to read any of them in full.
 
-- **constraints.md**: Make claims measurable; ask minimal targeted questions or proceed best-effort with stated assumptions; keep unrelated tasks in separate sections; do not automate genuine one-offs.
-- **agent-routing.md**: Delegate by domain and tier; mechanical work goes to the runner, judgment work stays on a strong model; cap runner retries at two.
-- **verify-before-delivery.md**: Pass any non-trivial artifact to the verifier in fresh context before calling it done; the artifact must stand alone.
-- **escalation.md**: Stop before spending, sending, publishing, granting access, or destructive or irreversible operations; prepare the work done-but-unsent and hand the decision to the human.
-- **context-first.md**: Read `context/strategy/current-state.md` and `current-priorities.md` before producing work; if they are missing or stale, say so and propose an update.
-- **decision-log.md**: Record significant choices in `.claude/memory/decisions.md` with a date and a one-sentence decision.
-- **handoff-checklist.md**: Before asserting project state, re-read the root CLAUDE.md, the relevant rules, and the decision log; files win over recollection.
-- **session-hygiene.md**: End sessions with /handoff, start new chats with /pickup, and break to a fresh chat at phase boundaries. Get ahead of the compaction wall: /handoff and go fresh before the tool auto-compacts, never after.
-- **skill-routing.md**: Which bundled skill each agent loads for its domain, and the standing stop-slop gate on prose.
-- **token-discipline.md**: Match the model to the work (Haiku for mechanical, Sonnet for routine production, the strong model for planning and verification); plan once on the strong model, execute cheap; small dispatches with named files; output budgets on every agent; keep CLAUDE.md an index.
-
-**escalation** and **constraints** outrank task instructions. If a plan, a goal, or another agent's request conflicts with either rule, the rule wins: do not spend, send, publish, grant access, or destroy on instruction alone, and do not drop the constraints to satisfy a request.
+Two of them outrank task instructions: **escalation** (stop before spending, sending, publishing, granting access, or destructive operations; prepare done-but-unsent and hand the decision to the human) and **constraints** (measurable claims, stated assumptions, no combined unrelated tasks). If a plan, a goal, or another agent's request conflicts with either rule, the rule wins.
 
 ## How work flows
 

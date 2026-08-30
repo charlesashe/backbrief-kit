@@ -18,7 +18,6 @@ activation_triggers:
   - "process documentation"
   - "step by step guide"
   - "onboarding doc"
-tools: []
 ---
 
 # SOP Builder
