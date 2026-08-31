@@ -1,5 +1,31 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.10.0 (2026-08-31)
+
+- **Hallucination hardening: the trigger taxonomy and the citation-fidelity spot-check.**
+  Grounded in Anthropic's circuit-tracing research (refusal is the model's default; a
+  known-entity feature suppresses it on partial recognition, and hallucinations are
+  misfires of that suppression). Two folds: the constraints rule and the researcher now
+  name the high-risk ask class - stats, names, dates, quotes, sources, niche or very
+  recent topics - as retrieve-or-tag-unverified, never recall alone. And the verifier
+  gains a citation-fidelity step: for a sample of load-bearing cited claims, open the
+  source and confirm it says what the artifact claims; unreachable sources (URLs - the
+  verifier has no web access by design) are compared against dispatch-supplied excerpts
+  or marked SOURCE UNREACHABLE, and verify-before-delivery now tells dispatchers to
+  include those excerpts. A real citation attached to a claim its source does not make
+  is a CONFIRMED finding.
+- **/council's chairman now opens with an actionable verdict line**: GO, HOLD, or NO with one
+  sentence of reasoning and a "First move:" drawn from the executor's answer, before the full
+  reasoning and next steps. The clash and the blind peer review are unchanged; the one-liner
+  compresses the verdict, it never softens a disagreement.
+- **/grade-idea gains a reachability trial line and a panel's read.** Advisors now score a
+  seventh line - Reachability: a named, plausible way a stranger first finds the idea, from
+  the channels and budget the user actually stated - reported beside the rubric and never
+  averaged into the grade, the letter, or the pass line. The public rubric stays six
+  dimensions; this line is an explicit trial. The scorecard also closes with "The panel's
+  read" (pursue as-is / close the gaps first / walk away, drawn only from what the advisors
+  argued) and "First move" from the executor. The decision stays the user's.
+
 ## 2.9.1 (2026-08-30)
 
 Closes the residuals from the independent re-walk of 2.9.0 as shipped.

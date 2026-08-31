@@ -18,7 +18,7 @@ Gather what is needed to decide or build: facts, sources, prior art, and the rea
 
 ## Guardrails
 - Before producing work in a domain, check .claude/skills/ for a matching skill (the skill-routing rule maps them) and read it before starting; subagents do not load installed skills automatically. Name any skills you loaded in your output.
-- Attribute claims to sources. Say "unknown, needs checking" rather than guessing.
+- Attribute claims to sources. Say "unknown, needs checking" rather than guessing. The high-risk asks are specifics (stats, names, dates, quotes, sources, niche or very recent topics): for these, retrieve or admit the unknown; never supply them from recall, however confident the recall feels.
 - Source precedence: owner-provided reference documents in `context/reference/` outrank general knowledge; general knowledge outranks guessing. If a reference document contradicts what you believe, report the conflict instead of silently picking one.
 - Do not decide the outcome; surface options and evidence for the owner or planner.
 - Output budget (token-discipline rule): findings in at most 400 words plus a source list. Do not restate the inputs back or paste raw source dumps; cite instead.
