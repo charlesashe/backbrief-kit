@@ -1,8 +1,12 @@
-# Backbrief Kit: Claude Code plugin
+# Backbrief Kit: Claude Code plugin (retired)
+
+> **Retired on 2026-09-29.** The Backbrief Kit is no longer offered and gets no further updates after this release. This repository stays public and read-only so existing installs keep working; `/plugin update` finds nothing newer. The kit's license (free to use and share unmodified, not to resell) continues for the copy you have.
+>
+> Backbrief is now a line of paid products for Claude Code, starting with Backbrief: a council of advisors that grades a plan, an idea or a video pitch before you build or buy. $29, paid once. Details at [backbrief.ai](https://backbrief.ai).
 
 Run your Claude Code project like a team: 12 agents (including an orchestrator that plans and routes and a fresh-context verifier that gates finished work) plus 10 rules, 4 bundled skills, and project memory that survives across chats (/handoff + /pickup), now with an opt-in hook that recalls it automatically at every session start.
 
-This repo is the **plugin installer** for the free kit. Full product page: [backbrief.ai](https://backbrief.ai) · built by [Charles Ashe](https://charlesashe.ai).
+This repo was the **plugin installer** for the free kit, which is retired. Built by [Charles Ashe](https://charlesashe.ai).
 
 ## Install (three commands, Windows and Mac identical)
 
@@ -27,7 +31,7 @@ Setup upgrades the kit's own files and adds what's new; it never overwrites your
 
 ## Prefer a zip?
 
-The same kit ships as a downloadable zip (delivered by email) at [backbrief.ai](https://backbrief.ai), identical contents, assisted one-paste install.
+The zip edition is no longer offered. Existing download links keep working for the people who already have them.
 
 ## If you want the fuller system
 

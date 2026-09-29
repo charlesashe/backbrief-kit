@@ -1,5 +1,9 @@
 # Backbrief Kit: Changelog (formerly the Shiproom Kit)
 
+## 2.10.1 (2026-09-29)
+
+- **Retired.** The free Backbrief Kit is no longer offered and this is its last release; the README, plugin and marketplace manifests carry the notice. Nothing in the kit itself changed. Existing installs keep working under the same license. Backbrief continues as a line of paid products at backbrief.ai.
+
 ## 2.10.0 (2026-08-31)
 
 - **Hallucination hardening: the trigger taxonomy and the citation-fidelity spot-check.**

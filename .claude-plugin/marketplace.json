@@ -1,6 +1,6 @@
 {
   "name": "backbrief",
-  "description": "Backbrief: run your Claude Code project like a team. Free kit installer; Backbrief Business OS at backbrief.ai.",
+  "description": "Retired 2026-09-29: the free Backbrief Kit is no longer offered. Existing installs keep working. Backbrief is now a line of paid products at backbrief.ai.",
   "owner": {
     "name": "Charles Ashe",
     "url": "https://charlesashe.ai"
@@ -9,7 +9,7 @@
     {
       "name": "backbrief-kit",
       "source": "./",
-      "description": "Run a Claude Code project like a team instead of one long chat: an orchestrator that plans and routes to specialist agents, a fresh-context verifier that checks work before it ships, and project memory that survives across sessions.",
+      "description": "Retired 2026-09-29; no further updates. Run a Claude Code project like a team instead of one long chat: an orchestrator that plans and routes to specialist agents, a fresh-context verifier that checks work before it ships, and project memory that survives across sessions.",
       "category": "productivity",
       "homepage": "https://backbrief.ai"
     }

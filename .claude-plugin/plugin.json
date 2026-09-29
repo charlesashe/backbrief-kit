@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "backbrief-kit",
-  "version": "2.10.0",
-  "description": "Run a Claude Code project like a team instead of one long chat. An orchestrator plans the work and routes it to specialist agents, a fresh-context verifier checks finished artifacts before they ship, and project memory carries state across sessions with /handoff and /pickup. Install, then run /backbrief-kit:setup for a guided setup.",
+  "version": "2.10.1",
+  "description": "Retired 2026-09-29: the free Backbrief Kit is no longer offered and gets no further updates; existing installs keep working. Run a Claude Code project like a team instead of one long chat. An orchestrator plans the work and routes it to specialist agents, a fresh-context verifier checks finished artifacts before they ship, and project memory carries state across sessions with /handoff and /pickup. Install, then run /backbrief-kit:setup for a guided setup.",
   "author": {
     "name": "Charles Ashe",
     "url": "https://charlesashe.ai"
